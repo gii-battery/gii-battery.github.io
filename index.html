@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="2026-07-11 锂电产业链政策、镍钴锂、正极、电池、电车与储能新闻日报">
-  <title>锂电产业链新闻简报 | 2026-07-11</title>
+  <title>GII 锂电产业链新闻简报 | 2026-07-11</title>
   <style>
     :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --coral:#ffad9f; --mint:#d9f3e4; --shadow:rgba(23,50,74,.09); }
     * { box-sizing:border-box; }
@@ -50,20 +50,23 @@
     .links p { margin:6px 0; font-size:.82rem; }
     footer { margin-top:34px; padding-top:16px; border-top:2px dashed var(--line); color:var(--muted); font-size:.86rem; }
     @media (max-width:720px) { .page{width:min(100% - 20px,1120px);padding-top:14px}.site-nav{align-items:flex-start}.site-nav .brand{max-width:150px}.nav-links{gap:12px}.masthead{padding:20px}h1{font-size:1.85rem}.segment-jump{align-items:flex-start}.report-head{align-items:flex-start;flex-direction:column;gap:4px}.card-grid{grid-template-columns:1fr}.card{padding:16px} }
+      /* NEWS_ANCHORS */
+    .card { scroll-margin-top: 18px; }
+    .card:target { outline: 3px solid #f2c94c; outline-offset: 4px; }
   </style>
 </head>
 <body>
   <main class="page">
     <nav class="site-nav" aria-label="报告导航">
-      <a class="brand" href="./">Lithium Industry Briefing</a>
+      <a class="brand" href="./">GII</a>
       <div class="nav-links">
         <a class="current" aria-current="page" href="./">最新报告</a>
         <a href="archive.html">历史报告</a>
-        <a href="subjects.html">主体归纳</a>
+        <a href="subjects.html">企业动态</a>
       </div>
     </nav>
     <header class="masthead">
-      <p class="kicker">Lithium Industry Briefing</p>
+      <p class="kicker">GII</p>
       <h1>锂电产业链新闻简报</h1>
       <div class="meta"><span>2026-07-11</span><span>Asia/Shanghai</span><span>资料截止 2026-07-11 20:37 (Asia/Shanghai)</span><span>23 条新闻</span></div>
       <p class="source-note"><strong>来源覆盖：</strong>检索窗口以最近24-72小时为主，必要时扩大至7天；重点扫描SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府及公司原始公告。政策侧核实了中国财政部、工信系统和行业联盟公开信息；上游侧以企业公告、SMM及项目方披露为主。Reuters当日未检索到足够可直接访问的新增原文。 当日未检索到瑞翔、EcoPro等重点正极厂商足够重要且可核实的新事件，因此省略正极板块；电池侧保留电解液企业与联盟最新产业信号。 终端电车以盖世汽车、车企公告和AP为主；储能以项目方及公司原始公告为主。部分合作未披露电芯供应商或合同金额，文中已明确标注。</p>
@@ -82,7 +85,7 @@
     <section class="segment" id="policy-trade">
       <div class="segment-heading"><h2 class="segment-title">政策与贸易 · 5条</h2></div>
       <div class="card-grid">
-          <article class="card">
+          <article class="card" id="news-1">
             <div class="card-topline"><span>01</span><time datetime="2026-07-07">信息日期 · 2026-07-07</time></div>
             <h3>美国国防后勤局招标五年采购1.62万吨电池级碳酸锂</h3>
             <p><strong>本次事件：</strong>SMM披露，美国国防后勤局于7月2日发布招标，计划通过五年固定价格合同采购合计16,200吨电池级碳酸锂，用于补充美国国家国防储备。该动作属于政府直接战略采购，采购节奏、供应商资格和最终成交价格尚待招标结果确认。</p>
@@ -101,7 +104,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-2">
             <div class="card-topline"><span>02</span><time datetime="2026-07-06">信息日期 · 2026-07-06</time></div>
             <h3>中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定</h3>
             <p><strong>本次事件：</strong>7月1日起，《电力储能系统并网储能系统安全通用规范》GB/T 46957-2025与国家发改委、国家能源局第41号令同步进入执行。后者首次把电化学储能电站涉网性能纳入电力重大事故隐患判定，项目从技术协议层面的建议转为监管硬约束。盖世汽车援引产业排产数据称，7月中国锂电排产约283GWh，环比增长5.6%，其中储能电芯占42.9%。</p>
@@ -121,7 +124,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-3">
             <div class="card-topline"><span>03</span><time datetime="2026-07-03">信息日期 · 2026-07-03</time></div>
             <h3>中国四部门取消部分新能源商用车车船税优惠，2027年起执行</h3>
             <p><strong>本次事件：</strong>财政部、税务总局、工业和信息化部、交通运输部公告，自2027年1月1日起取消节能汽车车船税减半政策，同时取消纯电动商用车、插电式（含增程式）混合动力汽车和燃料电池商用车的车船税免征政策。新取得及此前已取得的相关车辆均按车船税法及配套规定征税，2018年相关优惠条款同步废止；纯电动乘用车并未列入此次取消范围。</p>
@@ -143,7 +146,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-4">
             <div class="card-topline"><span>04</span><time datetime="2026-07-01">信息日期 · 2026-07-01</time></div>
             <h3>中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路</h3>
             <p><strong>本次事件：</strong>《电动汽车安全要求》和《电动汽车用动力蓄电池安全要求》自7月1日起施行。新标准要求动力电池在规定测试条件下不得起火、爆炸并保留报警功能，新增底部撞击测试和300次快充循环后的外部短路测试；整车端要求配置可切断高压回路与储能系统连接的物理式一键断电装置。标准覆盖7项单体测试和17项电池包或系统测试。</p>
@@ -163,7 +166,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-5">
             <div class="card-topline"><span>05</span><time datetime="2026-06-29">信息日期 · 2026-06-29</time></div>
             <h3>中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应</h3>
             <p><strong>本次事件：</strong>中国汽车动力电池产业创新联盟与中关村储能产业技术联盟发布倡议，要求动力和储能电池企业对中小供应商的货物、工程和服务账款原则上不超过60个自然日。Reuters报道，宁德时代、中创新航和欣旺达等联盟成员随后公开承诺落实。倡议本身不是强制法规，但已形成头部企业公开履约承诺。</p>
@@ -192,7 +195,7 @@
     <section class="segment" id="upstream">
       <div class="segment-heading"><h2 class="segment-title">上游镍钴锂 · 4条</h2></div>
       <div class="card-grid">
-          <article class="card">
+          <article class="card" id="news-6">
             <div class="card-topline"><span>06</span><time datetime="2026-07-09">信息日期 · 2026-07-09</time></div>
             <h3>ExGen完成收购内华达三处锂资产权益，支付股份进入交割安排</h3>
             <p><strong>本次事件：</strong>加拿大ExGen Resources完成从独立私人公司及其子公司收购内华达州三处锂项目权益及相关资产，交易包含两份期权协议项下的矿权。公告显示，公司将按交割安排发行支付股份，其中17,909,700股拟进一步分配给卖方股东；交易仍需多伦多创业交易所最终接受。项目以Spark South为核心，当前仍处勘探及项目加速阶段，尚未披露资源量和投产时间。</p>
@@ -211,7 +214,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-7">
             <div class="card-topline"><span>07</span><time datetime="2026-07-07">信息日期 · 2026-07-07</time></div>
             <h3>Precision Periodic拟在佛州建设模块化镍钴锰电池级精炼厂</h3>
             <p><strong>本次事件：</strong>美国Precision Periodic宣布计划在佛罗里达建设模块化关键矿产精炼设施，目标产品覆盖电池级镍、钴和锰。公司称项目将采用其清洁工艺和模块化产线，面向美国电池及工业客户；目前公告未披露投资额、具体选址、设计产能、融资完成情况和投产时间，因此仍处规划阶段。</p>
@@ -230,7 +233,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-8">
             <div class="card-topline"><span>08</span><time datetime="2026-07-07">信息日期 · 2026-07-07</time></div>
             <h3>Aqua Metals推进Headwaters ARC回收园区，首阶段规划锂盐与黑粉产线</h3>
             <p><strong>本次事件：</strong>Aqua Metals更新美国中西部Headwaters ARC电池回收与关键矿物园区计划，正推进候选场址尽调、设备供应商选择、原料和产品包销谈判。项目拟分阶段建设预处理、黑粉及电池级碳酸锂产能，后续再导入NMC等体系的镍、锰、钴回收。公司尚未公布最终地点、总投资和确定投产日期，项目仍受融资、许可和最终投资决定约束。</p>
@@ -249,7 +252,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-9">
             <div class="card-topline"><span>09</span><time datetime="2026-07-02">信息日期 · 2026-07-02</time></div>
             <h3>Critical Metals与European Lithium修订收购协议，Wolfsberg交易文件拟于夏季发出</h3>
             <p><strong>本次事件：</strong>Critical Metals与European Lithium签署修订契据，调整前者拟收购后者的Scheme Implementation Deed。European Lithium预计在7月底或8月初向股东发送包含独立专家报告的计划文件。交易核心资产为奥地利Wolfsberg锂项目，该项目已取得完整矿山许可；交易仍需股东、法院及其他条件批准，尚未完成。</p>
@@ -275,7 +278,7 @@
     <section class="segment" id="battery">
       <div class="segment-heading"><h2 class="segment-title">电池与装机 · 3条</h2></div>
       <div class="card-grid">
-          <article class="card">
+          <article class="card" id="news-10">
             <div class="card-topline"><span>10</span><time datetime="2026-07-10">信息日期 · 2026-07-10</time></div>
             <h3>天赐材料预计上半年净利27亿至30亿元，电解液出货同比增逾40%</h3>
             <p><strong>本次事件：</strong>天赐材料发布2026年半年度业绩预告，预计归母净利润27亿至30亿元，同比增长907.84%至1019.82%。公司披露，上半年电解液出货量同比增长超过40%，电解液和六氟磷酸锂主要产线截至6月底接近满产；三季度电解液排产预计继续环比提高，九江、福鼎基地改扩建同步推进。最终业绩仍以半年报审计口径为准。</p>
@@ -294,7 +297,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-11">
             <div class="card-topline"><span>11</span><time datetime="2026-06-30">信息日期 · 2026-06-30</time></div>
             <h3>电池联盟预计2026年中国动力电池装机需求888.7GWh，同比增长15.8%</h3>
             <p><strong>本次事件：</strong>中国汽车动力电池产业创新联盟在年度论坛发布判断，预计2026年中国动力电池装机需求达到888.7GWh，同比增长15.8%。该数字属于联盟年度预测，不是已实现装机量；后续实际结果仍取决于新能源汽车产销、出口和单车带电量。</p>
@@ -313,7 +316,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-12">
             <div class="card-topline"><span>12</span><time datetime="2026-06-30">信息日期 · 2026-06-30</time></div>
             <h3>工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质</h3>
             <p><strong>本次事件：</strong>工信部装备工业一司汽车发展处负责人在中国汽车动力电池产业创新联盟年度论坛表示，将围绕动力电池关键材料和新体系加强产业引导，点名富锂正极、硅负极、固态电解质等方向。公开信息属于主管部门产业信号，未同时公布专项资金规模、企业名单或强制实施时间表。</p>
@@ -339,7 +342,7 @@
     <section class="segment" id="ev">
       <div class="segment-heading"><h2 class="segment-title">终端电车 · 6条</h2></div>
       <div class="card-grid">
-          <article class="card">
+          <article class="card" id="news-13">
             <div class="card-topline"><span>13</span><time datetime="2026-07-10">信息日期 · 2026-07-10</time></div>
             <h3>广汽与引望合作车型启境GT7启动全国交付，支持6C超充</h3>
             <p><strong>本次事件：</strong>启境汽车GT7于7月9日启动全国交付。车型6月26日上市，五个配置售价20.99万至32.99万元，是广汽集团与华为旗下引望合作的最新量产车型，搭载华为乾崑ADS 5、鸿蒙座舱及途灵平台。超长续航版本CLTC续航900公里，支持6C超充，官方称5分钟可补能333公里；三电供应商和首批交付量未披露。</p>
@@ -360,7 +363,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-14">
             <div class="card-topline"><span>14</span><time datetime="2026-07-10">信息日期 · 2026-07-10</time></div>
             <h3>蔚来开始交付五座版ES8，最新一代累计交付12万辆</h3>
             <p><strong>本次事件：</strong>蔚来在中国启动旗舰纯电SUV ES8五座版全国交付，至此形成五座、六座和七座产品组合。盖世汽车援引蔚来数据称，最新一代ES8自2025年9月21日开始交付后275天累计交付达到12万辆，并连续六个月位列中国大型SUV及约40万元价格带零售销量首位。五座版价格、电池包选择和首批交付量在该报道中未披露。</p>
@@ -379,7 +382,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-15">
             <div class="card-topline"><span>15</span><time datetime="2026-07-10">信息日期 · 2026-07-10</time></div>
             <h3>大众集团二季度销量降8.6%，宣布车型数量最多削减一半</h3>
             <p><strong>本次事件：</strong>大众集团披露二季度全球销量降至不足210万辆，同比下降8.6%，中国销量降幅超过三分之一。董事会随后宣布进入重组下一阶段，计划把集团车型数量最多削减一半，并通过减少复杂度、调整区域产品和压缩过剩产能改善竞争力；公司尚未公布具体取消车型名单。报道指出相关工厂已全面转向电动车生产，调整将影响后续电动车平台和车型投放节奏。</p>
@@ -398,7 +401,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-16">
             <div class="card-topline"><span>16</span><time datetime="2026-07-09">信息日期 · 2026-07-09</time></div>
             <h3>比亚迪第1700万辆新能源车下线，海豹08搭载第二代刀片电池</h3>
             <p><strong>本次事件：</strong>比亚迪7月8日在西安基地宣布第1700万辆新能源车下线，节点车型为海洋网旗舰轿车海豹08。该车7月2日上市，售价19.69万至23.99万元，纯电版最高CLTC续航905公里，搭载第二代刀片电池及闪充技术。比亚迪披露2026年上半年累计销量181万辆，其中海外乘用车及皮卡销量789,367辆，同比增长68%。</p>
@@ -417,7 +420,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-17">
             <div class="card-topline"><span>17</span><time datetime="2026-07-09">信息日期 · 2026-07-09</time></div>
             <h3>Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持</h3>
             <p><strong>本次事件：</strong>Autoliv与小鹏汽车7月7日在广州签署战略框架协议，把既有供应商与客户关系扩展到产品开发、工程协同、供应链整合、数字化、低碳、下一代技术及全球业务支持。协议没有披露采购金额、具体车型、零部件数量和合作期限，当前属于战略框架层级。</p>
@@ -437,7 +440,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-18">
             <div class="card-topline"><span>18</span><time datetime="2026-07-08">信息日期 · 2026-07-08</time></div>
             <h3>小米汽车发布SkyNomad新车系，首款车型规格与投产计划待公布</h3>
             <p><strong>本次事件：</strong>小米汽车公布全新车系英文名SkyNomad，并注册“小米澎程”相关中文社交媒体账号。公司仅确认车系名称和生活方式定位，未披露首款车型的动力形式、价格、量产地点和发布时间。公开商标记录显示，小米于2024年11月已申请SKYNOMAD汽车相关类别；市场所称增程SUV及内部代号均未获公司确认。</p>
@@ -462,7 +465,7 @@
     <section class="segment" id="storage">
       <div class="segment-heading"><h2 class="segment-title">终端储能 · 5条</h2></div>
       <div class="card-grid">
-          <article class="card">
+          <article class="card" id="news-19">
             <div class="card-topline"><span>19</span><time datetime="2026-07-09">信息日期 · 2026-07-09</time></div>
             <h3>比亚迪与Masdar签署11.275GWh储能设备协议</h3>
             <p><strong>本次事件：</strong>公开报道显示，比亚迪与阿联酋可再生能源企业Masdar达成储能设备协议，规模为11.275GWh，设备将用于大型电力储能部署。现有可访问报道尚未完整披露项目所在地、分期交付计划、合同金额及系统具体配置，相关执行以双方后续正式项目公告为准。</p>
@@ -482,7 +485,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-20">
             <div class="card-topline"><span>20</span><time datetime="2026-07-07">信息日期 · 2026-07-07</time></div>
             <h3>Frontier Power USA选择Stella四个项目，形成920MWh储能组合</h3>
             <p><strong>本次事件：</strong>Frontier Power USA依据与Stella Energy Solutions的战略框架行使项目选择权，纳入Blanquilla、Aransas Pass、Nash和Wallis四个电池储能项目，组合规模合计920MWh，均位于美国ERCOT市场。公司计划调用此前与Eos达成的2GWh产能预留，重点部署美国制造的长时储能技术；各项目开工和投运日期尚未披露。</p>
@@ -503,7 +506,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-21">
             <div class="card-topline"><span>21</span><time datetime="2026-07-02">信息日期 · 2026-07-02</time></div>
             <h3>Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目</h3>
             <p><strong>本次事件：</strong>荷兰Vopak完成收购Green Energy Storage多数股权，并对荷兰一座200MW/800MWh电池储能项目作出最终投资决定。项目将进入建设执行阶段，服务电网调节及可再生能源消纳；公告未在摘要中披露电芯供应商和总投资额。Vopak从液体散货基础设施向电力储能资产延伸，Greenchoice参与相关能源业务。</p>
@@ -524,7 +527,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-22">
             <div class="card-topline"><span>22</span><time datetime="2026-07-02">信息日期 · 2026-07-02</time></div>
             <h3>European Energy完成Winton North光储融资，Amazon追加电池购电协议</h3>
             <p><strong>本次事件：</strong>European Energy宣布澳大利亚Winton North光伏与电池储能项目完成融资关闭。Amazon此前已签署项目光伏发电PPA，近期又为电池储能系统签署额外购电协议，使储能部分获得长期收入支持。公司公告未在摘要中披露电池容量、电芯供应商、融资金额和商业运行日期。</p>
@@ -544,7 +547,7 @@
 
             </div>
           </article>
-          <article class="card">
+          <article class="card" id="news-23">
             <div class="card-topline"><span>23</span><time datetime="2026-07-01">信息日期 · 2026-07-01</time></div>
             <h3>晶科储能与Taliva Energy签署东欧400MWh项目组合合同</h3>
             <p><strong>本次事件：</strong>晶科能源旗下晶科储能与Taliva Energy签署合同，为罗马尼亚和土耳其等东欧市场的多个大型电网侧项目提供合计400MWh电池储能系统。公告确认合同覆盖多个在开发项目，但未披露单个项目地点、MW配置、合同金额、交付批次和电芯来源。</p>

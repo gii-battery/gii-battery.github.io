@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>锂电产业链新闻简报 | 2026-07-10</title>
+  <title>GII 锂电产业链新闻简报 | 2026-07-10</title>
   <style>
     :root {
       --ink: #17324a;
@@ -327,21 +327,24 @@
       .segment-jump { align-items: flex-start; }
     }
 
+      /* NEWS_ANCHORS */
+    .card { scroll-margin-top: 18px; }
+    .card:target { outline: 3px solid #f2c94c; outline-offset: 4px; }
   </style>
 </head>
 <body>
   <main class="page">
     <nav class="site-nav" aria-label="报告导航">
-      <a class="brand" href="./">Lithium Industry Briefing</a>
+      <a class="brand" href="./">GII</a>
       <div class="nav-links">
         <a href="./">最新报告</a>
         <a class="current" aria-current="page" href="archive.html">历史报告</a>
-        <a href="subjects.html">主体归纳</a>
+        <a href="subjects.html">企业动态</a>
       </div>
     </nav>
 
     <header class="masthead">
-      <p class="kicker">Lithium Industry Briefing</p>
+      <p class="kicker">GII</p>
       <h1>锂电产业链新闻简报 | 2026-07-10</h1>
       <div class="meta">
         <span>报告日期：2026-07-10</span>
@@ -371,7 +374,7 @@
     <section class="segment" id="policy-trade">
       <h2 class="segment-title">政策与贸易 · 5 条</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card" id="news-1">
           <h3>中国动力电池安全新国标正式实施，新增底部撞击和快充循环后安全测试</h3>
           <p class="date">信息日期：2026-07-01；标准状态：现行</p>
           <div class="tags">
@@ -388,7 +391,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-2">
           <h3>重庆发布 2026—2028 充电行动方案，目标累计建设 75 万个以上设施</h3>
           <p class="date">信息日期：2026-07-07；文件印发：2026-07-06</p>
           <div class="tags">
@@ -404,7 +407,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-3">
           <h3>印度把锂离子电池制造设备关税优惠延长至 2029 年 3 月</h3>
           <p class="date">信息日期：2026-07-09；政策状态：立即生效</p>
           <div class="tags">
@@ -420,7 +423,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-4">
           <h3>马来西亚收紧整车进口纯电车准入，最低 CIF 20 万林吉特且功率不低于 180kW</h3>
           <p class="date">信息日期：2026-07-01；政策公布：2026-05-06</p>
           <div class="tags">
@@ -436,7 +439,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-5">
           <h3>澳大利亚 CIS 储能招标预留 2GWh，要求原住民分享至少 5% 股权或等值收入</h3>
           <p class="date">信息日期：2026-07-09；Tender 10 截止：2026-08-18</p>
           <div class="tags">
@@ -458,7 +461,7 @@
     <section class="segment" id="upstream">
       <h2 class="segment-title">上游镍钴锂 · 4 条</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card" id="news-6">
           <h3>Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权</h3>
           <p class="date">信息日期：2026-07-06</p>
           <div class="tags">
@@ -475,7 +478,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-7">
           <h3>Anson 为犹他 Green River 锂项目申请约 8,500 万美元美国能源部净资助</h3>
           <p class="date">信息日期：2026-07-07</p>
           <div class="tags">
@@ -491,7 +494,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-8">
           <h3>Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型</h3>
           <p class="date">信息日期：2026-07-08</p>
           <div class="tags">
@@ -508,7 +511,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-9">
           <h3>智利上半年锂出口额升至 32.18 亿美元，碳酸锂贡献 23.52 亿美元</h3>
           <p class="date">信息日期：2026-07-08</p>
           <div class="tags">
@@ -529,7 +532,7 @@
     <section class="segment" id="cathode">
       <h2 class="segment-title">正极与前驱体 · 1 条</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card" id="news-10">
           <h3>容百科技披露磷酸锰铁锂满产满销，钠电正极进入规模化出货</h3>
           <p class="date">信息日期：2026-07-07</p>
           <div class="tags">
@@ -552,7 +555,7 @@
     <section class="segment" id="battery">
       <h2 class="segment-title">电池与装机 · 4 条</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card" id="news-11">
           <h3>宁德时代发布天行 II 轻商超充版，峰值 8C、6 分 48 秒充至 80%</h3>
           <p class="date">信息日期：2026-07-07</p>
           <div class="tags">
@@ -568,7 +571,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-12">
           <h3>Tesla 开放柏林电芯产线给初创企业测试，18GWh 扩产项目同步推进</h3>
           <p class="date">信息日期：2026-07-08；申请截止：2026-07-24</p>
           <div class="tags">
@@ -585,7 +588,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-13">
           <h3>LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统</h3>
           <p class="date">信息日期：2026-07-08；投产公告日期：2026-07-01</p>
           <div class="tags">
@@ -602,7 +605,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-14">
           <h3>比亚迪半导体 BMS AFE 芯片累计出货超过 1 亿颗</h3>
           <p class="date">信息日期：2026-07-07</p>
           <div class="tags">
@@ -622,7 +625,7 @@
     <section class="segment" id="ev">
       <h2 class="segment-title">终端电车 · 8 条</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card" id="news-15">
           <h3>比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池</h3>
           <p class="date">信息日期：2026-07-09；下线日期：2026-07-08</p>
           <div class="tags">
@@ -638,7 +641,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-16">
           <h3>奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%</h3>
           <p class="date">信息日期：2026-07-08</p>
           <div class="tags">
@@ -655,7 +658,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-17">
           <h3>零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美</h3>
           <p class="date">信息日期：2026-07-06</p>
           <div class="tags">
@@ -672,7 +675,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-18">
           <h3>小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元</h3>
           <p class="date">信息日期：2026-07-10；预售日期：2026-07-02</p>
           <div class="tags">
@@ -689,7 +692,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-19">
           <h3>吉利银河 TT 全球首发，采用 800V 架构和激光雷达辅助驾驶</h3>
           <p class="date">信息日期：2026-07-07</p>
           <div class="tags">
@@ -704,7 +707,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-20">
           <h3>小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露</h3>
           <p class="date">信息日期：2026-07-08</p>
           <div class="tags">
@@ -720,7 +723,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-21">
           <h3>广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站</h3>
           <p class="date">信息日期：2026-07-08</p>
           <div class="tags">
@@ -736,7 +739,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-22">
           <h3>中汽协：上半年中国新能源汽车销量 744.6 万辆，6 月渗透率 58.5%</h3>
           <p class="date">信息日期：2026-07-09</p>
           <div class="tags">
@@ -756,7 +759,7 @@
     <section class="segment" id="storage">
       <h2 class="segment-title">终端储能 · 7 条</h2>
       <div class="cards">
-        <article class="card">
+        <article class="card" id="news-23">
           <h3>Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂</h3>
           <p class="date">信息日期：2026-07-08；计划出货：2027 年第一季度</p>
           <div class="tags">
@@ -773,7 +776,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-24">
           <h3>Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统</h3>
           <p class="date">信息日期：2026-07-10</p>
           <div class="tags">
@@ -789,7 +792,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-25">
           <h3>Alpiq 收购 Harmony Energy 90% 股权，纳入约 400MW 在建储能资产</h3>
           <p class="date">信息日期：2026-07-09</p>
           <div class="tags">
@@ -806,7 +809,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-26">
           <h3>Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能</h3>
           <p class="date">信息日期：2026-07-09；公司公告日期：2026-07-07</p>
           <div class="tags">
@@ -823,7 +826,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-27">
           <h3>Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产</h3>
           <p class="date">信息日期：2026-07-09；融资公告日期：2026-07-07</p>
           <div class="tags">
@@ -839,7 +842,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-28">
           <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
           <p class="date">信息日期：2026-07-09</p>
           <div class="tags">
@@ -855,7 +858,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" id="news-29">
           <h3>CleanPeak 签署西悉尼机场 15 年供能协议，配建 30MW/120MWh 储能</h3>
           <p class="date">信息日期：2026-07-07</p>
           <div class="tags">

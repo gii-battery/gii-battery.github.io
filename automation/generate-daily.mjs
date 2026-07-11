@@ -319,7 +319,7 @@ function renderCard(event, index) {
     `<p><strong>背景链接：</strong><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)} · ${escapeHtml(source.url)}</a></p>`,
   ).join("\n                ");
 
-  return `          <article class="card">
+  return `          <article class="card" id="news-${index}">
             <div class="card-topline"><span>${String(index).padStart(2, "0")}</span><time datetime="${escapeHtml(event.info_date)}">信息日期 · ${escapeHtml(event.info_date)}</time></div>
             <h3>${escapeHtml(event.headline)}</h3>
             <p><strong>本次事件：</strong>${escapeHtml(event.event_details)}</p>
@@ -337,11 +337,11 @@ function renderCard(event, index) {
 
 function siteNavigation(currentPage) {
   return `    <nav class="site-nav" aria-label="报告导航">
-      <a class="brand" href="./">Lithium Industry Briefing</a>
+      <a class="brand" href="./">GII</a>
       <div class="nav-links">
         <a${currentPage === "latest" ? ' class="current" aria-current="page"' : ""} href="./">最新报告</a>
         <a${currentPage === "archive" ? ' class="current" aria-current="page"' : ""} href="archive.html">历史报告</a>
-        <a href="subjects.html">主体归纳</a>
+        <a href="subjects.html">企业动态</a>
       </div>
     </nav>`;
 }
@@ -367,7 +367,7 @@ ${cards}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${reportDate} 锂电产业链政策、镍钴锂、正极、电池、电车与储能新闻简报">
-  <title>锂电产业链新闻简报 | ${reportDate}</title>
+  <title>GII 锂电产业链新闻简报 | ${reportDate}</title>
   <style>
     :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --coral:#ffad9f; --mint:#d9f3e4; --shadow:rgba(23,50,74,.09); }
     * { box-sizing:border-box; }
@@ -400,7 +400,8 @@ ${cards}
     .segment-heading { margin-bottom:12px; }
     .segment-title { display:inline-block; margin:0; padding:6px 12px; border:2px dashed var(--line); border-radius:7px; background:var(--blue-pale); color:var(--blue-deep); font-size:1.18rem; }
     .card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
-    .card { min-width:0; padding:18px; border:1px dashed #9fc7e5; border-radius:8px; background:#fff; box-shadow:0 7px 18px var(--shadow); }
+    .card { min-width:0; scroll-margin-top:18px; padding:18px; border:1px dashed #9fc7e5; border-radius:8px; background:#fff; box-shadow:0 7px 18px var(--shadow); }
+    .card:target { outline:3px solid #f2c94c; outline-offset:4px; }
     .card-topline { display:flex; align-items:center; justify-content:space-between; gap:12px; color:var(--muted); font-size:.82rem; }
     .card-topline span { display:grid; place-items:center; width:30px; height:30px; border-radius:50%; background:var(--yellow); color:var(--blue-deep); font-weight:900; }
     .card-topline time { font-weight:750; }
@@ -419,7 +420,7 @@ ${cards}
   <main class="page">
 ${siteNavigation(currentPage)}
     <header class="masthead">
-      <p class="kicker">Lithium Industry Briefing</p>
+      <p class="kicker">GII · Lithium Industry Briefing</p>
       <h1>锂电产业链新闻简报</h1>
       <div class="meta"><span>${reportDate}</span><span>${TIME_ZONE}</span><span>资料截止 ${cutoff}</span><span>${events.length} 条新闻</span></div>
       <p class="source-note"><strong>来源覆盖：</strong>${escapeHtml(coverageNote)}</p>
