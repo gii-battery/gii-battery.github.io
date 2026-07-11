@@ -1,40 +1,6 @@
 {
-  "updated_at": "2026-07-11T16:49:28.873Z",
+  "updated_at": "2026-07-11T17:03:01.362Z",
   "subjects": [
-    {
-      "id": "subject-19z0bqb",
-      "name": "比亚迪",
-      "count": 3,
-      "items": [
-        {
-          "subject": "比亚迪",
-          "date": "2026-07-09",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-16",
-          "headline": "比亚迪第1700万辆新能源车下线，海豹08搭载第二代刀片电池",
-          "segment": "终端电车"
-        },
-        {
-          "subject": "比亚迪",
-          "date": "2026-07-09",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-19",
-          "headline": "比亚迪与Masdar签署11.275GWh储能设备协议",
-          "segment": "终端储能"
-        },
-        {
-          "subject": "比亚迪",
-          "date": "2026-07-09",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-15",
-          "headline": "比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池",
-          "segment": "终端电车"
-        }
-      ]
-    },
     {
       "id": "subject-1pza3xe",
       "name": "宁德时代",
@@ -104,6 +70,31 @@
       ]
     },
     {
+      "id": "subject-19z0bqb",
+      "name": "比亚迪",
+      "count": 2,
+      "items": [
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-19",
+          "headline": "比亚迪与Masdar签署11.275GWh储能设备协议",
+          "segment": "终端储能"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-15",
+          "headline": "比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
       "id": "subject-4m57m8",
       "name": "工业和信息化部",
       "count": 2,
@@ -129,31 +120,6 @@
       ]
     },
     {
-      "id": "subject-nb3fd4",
-      "name": "小米汽车",
-      "count": 2,
-      "items": [
-        {
-          "subject": "小米汽车",
-          "date": "2026-07-08",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-18",
-          "headline": "小米汽车发布SkyNomad新车系，首款车型规格与投产计划待公布",
-          "segment": "终端电车"
-        },
-        {
-          "subject": "小米汽车",
-          "date": "2026-07-08",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-20",
-          "headline": "小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露",
-          "segment": "终端电车"
-        }
-      ]
-    },
-    {
       "id": "subject-11h8650",
       "name": "小鹏汽车",
       "count": 2,
@@ -175,31 +141,6 @@
           "report_anchor": "news-17",
           "headline": "Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持",
           "segment": "终端电车"
-        }
-      ]
-    },
-    {
-      "id": "subject-19zfmlq",
-      "name": "Frontier Power USA",
-      "count": 2,
-      "items": [
-        {
-          "subject": "Frontier Power USA",
-          "date": "2026-07-09",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-26",
-          "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
-          "segment": "终端储能"
-        },
-        {
-          "subject": "Frontier Power USA",
-          "date": "2026-07-07",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-20",
-          "headline": "Frontier Power USA选择Stella四个项目，形成920MWh储能组合",
-          "segment": "终端储能"
         }
       ]
     },
@@ -300,22 +241,6 @@
       ]
     },
     {
-      "id": "subject-6xogt2",
-      "name": "国家标准化管理委员会",
-      "count": 1,
-      "items": [
-        {
-          "subject": "国家标准化管理委员会",
-          "date": "2026-07-01",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-4",
-          "headline": "中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路",
-          "segment": "政策与贸易"
-        }
-      ]
-    },
-    {
       "id": "subject-1e8v0du",
       "name": "国家发展改革委",
       "count": 1,
@@ -343,22 +268,6 @@
           "report_file": "daily-2026-07-11.html",
           "report_anchor": "news-2",
           "headline": "中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定",
-          "segment": "政策与贸易"
-        }
-      ]
-    },
-    {
-      "id": "subject-zhklg6",
-      "name": "国家市场监督管理总局",
-      "count": 1,
-      "items": [
-        {
-          "subject": "国家市场监督管理总局",
-          "date": "2026-07-01",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-4",
-          "headline": "中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路",
           "segment": "政策与贸易"
         }
       ]
@@ -567,6 +476,22 @@
           "report_file": "daily-2026-07-11.html",
           "report_anchor": "news-14",
           "headline": "蔚来开始交付五座版ES8，最新一代累计交付12万辆",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-nb3fd4",
+      "name": "小米汽车",
+      "count": 1,
+      "items": [
+        {
+          "subject": "小米汽车",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-20",
+          "headline": "小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露",
           "segment": "终端电车"
         }
       ]
@@ -940,22 +865,6 @@
       ]
     },
     {
-      "id": "subject-1i4amnq",
-      "name": "Eos Energy",
-      "count": 1,
-      "items": [
-        {
-          "subject": "Eos Energy",
-          "date": "2026-07-07",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-20",
-          "headline": "Frontier Power USA选择Stella四个项目，形成920MWh储能组合",
-          "segment": "终端储能"
-        }
-      ]
-    },
-    {
       "id": "subject-ow7y80",
       "name": "European Energy",
       "count": 1,
@@ -1031,6 +940,22 @@
           "report_file": "daily-2026-07-10.html",
           "report_anchor": "news-28",
           "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-19zfmlq",
+      "name": "Frontier Power USA",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Frontier Power USA",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-26",
+          "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
           "segment": "终端储能"
         }
       ]
@@ -1479,22 +1404,6 @@
           "report_file": "daily-2026-07-10.html",
           "report_anchor": "news-26",
           "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
-          "segment": "终端储能"
-        }
-      ]
-    },
-    {
-      "id": "subject-9hp0sc",
-      "name": "Stella Energy Solutions",
-      "count": 1,
-      "items": [
-        {
-          "subject": "Stella Energy Solutions",
-          "date": "2026-07-07",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-20",
-          "headline": "Frontier Power USA选择Stella四个项目，形成920MWh储能组合",
           "segment": "终端储能"
         }
       ]

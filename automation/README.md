@@ -5,6 +5,11 @@ Friday. It starts at 18:30 Asia/Shanghai, researches events since the previous
 published report with the OpenAI Responses API and web search, validates the
 result, waits until 19:00, and commits the report and subject index.
 
+Before publishing, the generator compares each candidate with historical report
+URLs and event identity (date, companies, headline, project/product and key
+numbers). A second guard in the local fallback publisher rejects the entire
+update if a cross-report duplicate survives generation.
+
 Required repository secret:
 
 - `OPENAI_API_KEY`: an OpenAI API project key with billing enabled.

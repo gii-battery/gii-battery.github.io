@@ -3,6 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
 import { buildSubjectIndex } from "./build-subject-index.mjs";
+import { extractReportEvents, findLikelyDuplicate, normalizeUrl } from "./duplicate-guard.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODEL = process.env.OPENAI_MODEL || "gpt-5";
@@ -128,15 +129,17 @@ async function publicationContext(reportDate) {
     ? `${previousReport.date} 19:00 (${TIME_ZONE})`
     : `${shanghaiDate(fallbackStart)} 00:00 (${TIME_ZONE})`;
   const excludedUrls = [];
+  const historicalEvents = [];
 
   for (const report of reportsFile.reports.slice(0, 12)) {
     const html = await readFile(path.join(ROOT, report.file), "utf8");
+    historicalEvents.push(...extractReportEvents(html, report.date, report.file));
     for (const match of html.matchAll(/href="(https?:\/\/[^"#]+)"/g)) {
       excludedUrls.push(match[1].replaceAll("&amp;", "&"));
     }
   }
 
-  return { windowStart, excludedUrls: [...new Set(excludedUrls)] };
+  return { windowStart, excludedUrls: [...new Set(excludedUrls)], historicalEvents };
 }
 
 function extractOutputText(response) {
@@ -148,9 +151,12 @@ function extractOutputText(response) {
     .join("");
 }
 
-function researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls) {
+function researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents) {
   const excluded = excludedUrls.length
     ? `\n以下链接已在历史报告中使用，不得作为新事件重复收录：\n${excludedUrls.slice(0, 120).join("\n")}`
+    : "";
+  const priorHeadlines = historicalEvents.length
+    ? `\n以下事件已经发布。即使换了媒体或URL，只要主体、动作、日期或关键数字指向同一事件，也不得重复收录：\n${historicalEvents.slice(0, 100).map((event) => `- ${event.info_date} | ${event.headline}`).join("\n")}`
     : "";
   return `你是锂电产业链新闻简报的资深研究编辑。请使用 web search 对“${group.name}”进行实时检索，为 ${reportDate}（Asia/Shanghai）整理可核实的公司或机构事件。
 
@@ -169,10 +175,10 @@ function researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls) {
 7. 只有正极与前驱体新闻可填写cathode_impact，而且必须说明对化学路线、原料需求、客户认证、产能或区域供应的具体影响；其他板块填空字符串。
 8. headline必须是“主体+动作+对象/关键数字”，不得使用“布局、发力、值得关注、影响深远”等空话。
 9. info_date使用YYYY-MM-DD；每条填写板块、国家/地区、公司和主题标签。coverage_note简要说明本轮检索到的重点来源和缺口。
-10. 同一事件即使多家媒体报道也只能保留一次。只输出符合JSON schema的结果。${excluded}`;
+10. 同一事件即使多家媒体报道、标题不同或URL不同也只能保留一次。若历史事件出现实质新进展，必须在event_details中明确写出新增动作及新增日期，否则排除。只输出符合JSON schema的结果。${excluded}${priorHeadlines}`;
 }
 
-async function callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls) {
+async function callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     throw new Error("OPENAI_API_KEY is missing. Add it in GitHub repository Settings > Secrets and variables > Actions.");
@@ -198,7 +204,7 @@ async function callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls) 
           },
         },
       ],
-      input: researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls),
+      input: researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents),
       text: {
         format: {
           type: "json_schema",
@@ -227,12 +233,12 @@ async function callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls) 
   return parsed;
 }
 
-async function researchWithRetry(group, reportDate, cutoff, windowStart, excludedUrls) {
+async function researchWithRetry(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents) {
   let finalError;
   for (let attempt = 1; attempt <= 2; attempt += 1) {
     try {
       console.log(`Researching ${group.name} (${attempt}/2) with ${MODEL}`);
-      return await callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls);
+      return await callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents);
     } catch (error) {
       finalError = error;
       console.error(`${group.name} attempt ${attempt} failed: ${error.message}`);
@@ -242,40 +248,39 @@ async function researchWithRetry(group, reportDate, cutoff, windowStart, exclude
   throw finalError;
 }
 
-function normalizedUrl(value) {
-  try {
-    const url = new URL(value);
-    if (!["http:", "https:"].includes(url.protocol)) return null;
-    url.hash = "";
-    for (const key of [...url.searchParams.keys()]) {
-      if (key.startsWith("utm_") || key === "ref" || key === "source") url.searchParams.delete(key);
-    }
-    return url.toString();
-  } catch {
-    return null;
-  }
-}
-
-function prepareEvents(results, excludedUrls = []) {
-  const seenUrls = new Set(excludedUrls.map(normalizedUrl).filter(Boolean));
+function prepareEvents(results, excludedUrls = [], historicalEvents = []) {
+  const seenUrls = new Set(excludedUrls.map(normalizeUrl).filter(Boolean));
   const seenHeadlines = new Set();
+  const acceptedEventSummaries = [];
   const validSegments = new Set(segmentDefinitions.map((segment) => segment.label));
   const events = [];
 
   for (const result of results) {
     for (const event of result.events || []) {
-      const mainUrl = normalizedUrl(event.main_url);
+      const mainUrl = normalizeUrl(event.main_url);
       const headlineKey = event.headline.replace(/\s+/g, "").toLowerCase();
       if (!mainUrl || !validSegments.has(event.segment) || !event.headline || !event.event_details) continue;
       if (seenUrls.has(mainUrl) || seenHeadlines.has(headlineKey)) continue;
+      const eventSummary = {
+        headline: event.headline,
+        main_url: mainUrl,
+        companies: event.companies || [],
+        info_date: event.info_date,
+      };
+      const duplicate = findLikelyDuplicate(eventSummary, [...historicalEvents, ...acceptedEventSummaries]);
+      if (duplicate) {
+        console.warn(`Skipped duplicate event: ${event.headline} -> ${duplicate.prior.headline} (${duplicate.reason})`);
+        continue;
+      }
 
       seenUrls.add(mainUrl);
       seenHeadlines.add(headlineKey);
+      acceptedEventSummaries.push(eventSummary);
       events.push({
         ...event,
         main_url: mainUrl,
         background_sources: (event.background_sources || [])
-          .map((source) => ({ ...source, url: normalizedUrl(source.url) }))
+          .map((source) => ({ ...source, url: normalizeUrl(source.url) }))
           .filter((source) => source.url),
       });
     }
@@ -482,7 +487,7 @@ async function main() {
   const reportDate = requestedDate || shanghaiDate();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(reportDate)) throw new Error("Optional report date must be YYYY-MM-DD");
   const cutoff = `${reportDate} ${shanghaiTime()} (${TIME_ZONE})`;
-  const { windowStart, excludedUrls } = await publicationContext(reportDate);
+  const { windowStart, excludedUrls, historicalEvents } = await publicationContext(reportDate);
   let results;
 
   if (process.env.LITHIUM_DAILY_FIXTURE) {
@@ -492,11 +497,15 @@ async function main() {
   } else {
     results = [];
     for (const group of researchGroups) {
-      results.push(await researchWithRetry(group, reportDate, cutoff, windowStart, excludedUrls));
+      results.push(await researchWithRetry(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents));
     }
   }
 
-  const events = prepareEvents(results, process.env.LITHIUM_DAILY_FIXTURE ? [] : excludedUrls);
+  const events = prepareEvents(
+    results,
+    process.env.LITHIUM_DAILY_FIXTURE ? [] : excludedUrls,
+    process.env.LITHIUM_DAILY_FIXTURE ? [] : historicalEvents,
+  );
   if (events.length < MIN_NEWS_ITEMS) {
     throw new Error(`Only ${events.length} verified events survived validation; minimum is ${MIN_NEWS_ITEMS}. Existing site was not changed.`);
   }
