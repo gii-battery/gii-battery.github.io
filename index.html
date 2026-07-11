@@ -275,10 +275,56 @@
     .nav-links { display: flex; align-items: center; gap: 18px; }
     .nav-links .current { text-decoration: underline; }
 
+    .segment-jump {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 20px 0 4px;
+      padding: 12px 14px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: #f5fbff;
+    }
+
+    .segment-jump strong {
+      flex: 0 0 auto;
+      color: var(--blue-deep);
+      font-size: 0.9rem;
+    }
+
+    .segment-jump-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .segment-jump a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 10px;
+      border: 1px solid #a8cee9;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--blue-deep);
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .segment-jump a:hover,
+    .segment-jump a:focus-visible {
+      border-color: var(--blue);
+      background: var(--blue-pale);
+    }
+
+    .segment { scroll-margin-top: 18px; }
+
     @media (max-width: 720px) {
       .site-nav { align-items: flex-start; }
       .site-nav .brand { max-width: 150px; }
       .nav-links { gap: 12px; }
+      .segment-jump { align-items: flex-start; }
     }
 
   </style>
@@ -304,13 +350,111 @@
       </div>
       <p class="source-note"><strong>来源覆盖：</strong>本轮逐项检索了 SMM/上海有色网、Reuters、盖世汽车、中国汽车动力电池产业创新联盟和中汽协，并补充公司公告、交易所文件、政府网站及专业储能媒体。公开检索未获得可直接核验的近 7 日 SMM 与 Reuters 原文，也未检索到电池联盟截至截止时间发布的 6 月月度装车数据；因此上游和正极板块只保留可核验事件，不用旧综述补数。中国整车数据采用中汽协最新半年口径，合作和项目类新闻尽量加入双方历史公告。</p>
     </header>
+    <nav class="segment-jump" aria-label="板块直达">
+      <strong>板块直达</strong>
+      <div class="segment-jump-links">
+        <a href="#policy-trade">政策与贸易</a>
+        <a href="#upstream">上游镍钴锂</a>
+        <a href="#cathode">正极与前驱体</a>
+        <a href="#battery">电池与装机</a>
+        <a href="#ev">终端电车</a>
+        <a href="#storage">终端储能</a>
+      </div>
+    </nav>
 
     <div class="report-head">
       <h2>新闻罗列</h2>
       <p>共 29 条，按板块分组</p>
     </div>
 
-    <section class="segment">
+    <section class="segment" id="policy-trade">
+      <h2 class="segment-title">政策与贸易 · 5 条</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>中国动力电池安全新国标正式实施，新增底部撞击和快充循环后安全测试</h3>
+          <p class="date">信息日期：2026-07-01；标准状态：现行</p>
+          <div class="tags">
+            <span class="tag">板块：政策与贸易</span>
+            <span class="tag geo">国家/地区：中国</span>
+            <span class="tag company">公司/机构：市场监管总局、国家标准委、工信部、动力电池与车企</span>
+            <span class="tag topic">主题：强制标准 / 电池安全 / 快充 / 热扩散</span>
+          </div>
+          <p><span class="label">本次事件：</span>强制性国家标准 GB 38031-2025《电动汽车用动力蓄电池安全要求》于 7 月 1 日正式实施，替代 2020 版标准。新版提高热扩散测试要求，并新增电池底部撞击测试；快充电池还需先完成 300 次快充循环，再进行外部短路测试，要求不起火、不爆炸。标准由工信部主管，适用于新准入及按过渡要求切换的动力电池与整车产品。</p>
+          <p class="context"><span class="label">背景补充：</span>标准于 2025 年 3 月 28 日发布，主要起草单位包括宁德时代、国轩高科、比亚迪、中创新航、瑞浦兰钧、亿纬锂能、欣旺达以及多家中外车企。7 月 1 日后标准状态已由待实施转为现行，旧版 GB 38031-2020 废止。</p>
+          <div class="links">
+            <p>标准链接：<a href="https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AB693FAFF5D9716DF61C61D6FD2187A">https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AB693FAFF5D9716DF61C61D6FD2187A</a></p>
+            <p>政策说明：<a href="https://app.www.gov.cn/govdata/gov/202504/17/526982/article.html">https://app.www.gov.cn/govdata/gov/202504/17/526982/article.html</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>重庆发布 2026—2028 充电行动方案，目标累计建设 75 万个以上设施</h3>
+          <p class="date">信息日期：2026-07-07；文件印发：2026-07-06</p>
+          <div class="tags">
+            <span class="tag">板块：政策与贸易</span>
+            <span class="tag geo">国家/地区：中国 / 重庆</span>
+            <span class="tag company">公司/机构：重庆市四部门、充电运营商、重卡企业</span>
+            <span class="tag topic">主题：充电基础设施 / 超充 / 电动重卡 / 车网互动</span>
+          </div>
+          <p><span class="label">本次事件：</span>重庆市四部门联合印发电动汽车充电设施服务能力行动方案，目标到 2028 年底累计建成 75 万个以上充电设施、2,500 座以上超充站，公共充电总容量超过 750 万千瓦，可满足 200 万辆以上新能源汽车需求。方案还要求新增私人充电设施 20 万个以上，并覆盖城市、高速、农村、景区、社区和货运场景。</p>
+          <p class="context"><span class="label">背景补充：</span>重卡是单列任务：到 2028 年新建电动重卡大功率超充站 100 座以上，推广电动超充重卡不少于 1,500 辆。方案同时包含车网互动、投诉热线、收费和运维整治，以及大功率站点报装接电流程优化，执行期为 2026—2028 年。</p>
+          <div class="links">
+            <p>政策链接：<a href="https://www.cq.gov.cn/ywdt/jrcq/202607/t20260707_15802889.html">https://www.cq.gov.cn/ywdt/jrcq/202607/t20260707_15802889.html</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>印度把锂离子电池制造设备关税优惠延长至 2029 年 3 月</h3>
+          <p class="date">信息日期：2026-07-09；政策状态：立即生效</p>
+          <div class="tags">
+            <span class="tag">板块：政策与贸易</span>
+            <span class="tag geo">国家/地区：印度</span>
+            <span class="tag company">公司/机构：印度中央政府、CBIC、电池制造企业</span>
+            <span class="tag topic">主题：进口关税 / 电芯制造设备 / 本地化 / 2029</span>
+          </div>
+          <p><span class="label">本次事件：</span>印度政府把电子制造及锂离子电池生产设备的关税优惠延长至 2029 年 3 月 31 日，并立即实施。印度中央间接税和海关委员会将优惠设备清单扩展至 85 类，覆盖混料、涂布、辊压、分切、卷绕、叠片、注液、焊接、测试、化成老化、检验和包装，以及溶剂回收、除尘和污水处理等辅助设备。</p>
+          <p class="context"><span class="label">背景补充：</span>新清单替代原有豁免通知中的较窄条目，并为每类设备列明海关税则编码。政策主要降低印度尚不能广泛本地供应的专用设备进口成本，适用对象包括动力和储能电芯工厂；企业仍须满足母通知规定的指定用途和申报条件。</p>
+          <div class="links">
+            <p>新闻链接：<a href="https://economictimes.indiatimes.com/industry/cons-products/electronics/govt-extends-duty-relief-for-electronics-lithium-ion-battery-manufacturing-till-2029/articleshow/132274973.cms">https://economictimes.indiatimes.com/industry/cons-products/electronics/govt-extends-duty-relief-for-electronics-lithium-ion-battery-manufacturing-till-2029/articleshow/132274973.cms</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>马来西亚收紧整车进口纯电车准入，最低 CIF 20 万林吉特且功率不低于 180kW</h3>
+          <p class="date">信息日期：2026-07-01；政策公布：2026-05-06</p>
+          <div class="tags">
+            <span class="tag">板块：政策与贸易</span>
+            <span class="tag geo">国家/地区：马来西亚</span>
+            <span class="tag company">公司/机构：马来西亚投资、贸易与工业部，纯电车进口商</span>
+            <span class="tag topic">主题：CBU 进口 / 最低价格 / 本地组装 / 市场准入</span>
+          </div>
+          <p><span class="label">本次事件：</span>马来西亚投资、贸易与工业部规定，自 7 月 1 日起，所有以整车形式进口的纯电动车必须同时满足最低 CIF 完税前价值 20 万林吉特，以及电机功率不低于 180kW 两项条件；功率门槛由原来的 200kW 调整为 180kW。此前四年的特许准证特殊豁免已于 2025 年底到期。</p>
+          <p class="context"><span class="label">背景补充：</span>政策允许豁免期内已在库、已到港或在途的车辆按原安排售完，新增进口则适用新门槛。规则直接限制低价 CBU 电动车导入，鼓励品牌以当地组装方式进入大众市场；文件未改变 CKD 本地组装车型的准入条件。</p>
+          <div class="links">
+            <p>政策链接：<a href="https://www.miti.gov.my/miti/resources/Media%20Release/SIARAN_MEDIA_PENAMATAN_PENGECUALIAN_KHAS_6_Mei_2026_edited.pdf">https://www.miti.gov.my/miti/resources/Media%20Release/SIARAN_MEDIA_PENAMATAN_PENGECUALIAN_KHAS_6_Mei_2026_edited.pdf</a></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>澳大利亚 CIS 储能招标预留 2GWh，要求原住民分享至少 5% 股权或等值收入</h3>
+          <p class="date">信息日期：2026-07-09；Tender 10 截止：2026-08-18</p>
+          <div class="tags">
+            <span class="tag">板块：政策与贸易</span>
+            <span class="tag geo">国家/地区：澳大利亚</span>
+            <span class="tag company">公司/机构：DCCEEW、ASL、储能开发商、First Nations 社区</span>
+            <span class="tag topic">主题：储能招标 / 16GWh / 股权分享 / 政府承购</span>
+          </div>
+          <p><span class="label">本次事件：</span>澳大利亚容量投资计划 Tender 9 和 Tender 10 首次设置 First Nations 专项配额。Tender 10 面向 4GW/16GWh 清洁可调度容量，其中 500MW/2GWh 预留给承诺原住民社区持有至少 5% 股权、分享等值收入或采用两者组合的项目；Tender 9 的 5GW 发电招标另预留 500MW。</p>
+          <p class="context"><span class="label">背景补充：</span>Tender 10 已于 6 月 23 日开放，8 月 18 日截止，预计 12 月公布结果，并可能成为 CIS 最后一轮独立可调度容量招标。专项配额不是自动中标，项目仍须通过技术、交付能力、社区参与和系统可靠性等常规评审。</p>
+          <div class="links">
+            <p>政策链接：<a href="https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/first-nations-equity-revenue-sharing-set-aside">https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/first-nations-equity-revenue-sharing-set-aside</a></p>
+            <p>招标链接：<a href="https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/open-cis-tenders">https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/open-cis-tenders</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="segment" id="upstream">
       <h2 class="segment-title">上游镍钴锂 · 4 条</h2>
       <div class="cards">
         <article class="card">
@@ -381,7 +525,7 @@
       </div>
     </section>
 
-    <section class="segment">
+    <section class="segment" id="cathode">
       <h2 class="segment-title">正极与前驱体 · 1 条</h2>
       <div class="cards">
         <article class="card">
@@ -404,7 +548,7 @@
       </div>
     </section>
 
-    <section class="segment">
+    <section class="segment" id="battery">
       <h2 class="segment-title">电池与装机 · 4 条</h2>
       <div class="cards">
         <article class="card">
@@ -474,7 +618,7 @@
       </div>
     </section>
 
-    <section class="segment">
+    <section class="segment" id="ev">
       <h2 class="segment-title">终端电车 · 8 条</h2>
       <div class="cards">
         <article class="card">
@@ -608,7 +752,7 @@
       </div>
     </section>
 
-    <section class="segment">
+    <section class="segment" id="storage">
       <h2 class="segment-title">终端储能 · 7 条</h2>
       <div class="cards">
         <article class="card">
@@ -723,93 +867,6 @@
           <p class="context"><span class="label">背景补充：</span>项目地点位于悉尼 CBD 以西约 50 公里的 Badgerys Creek，机场初期年旅客量设计约 500 万人。协议未披露储能系统供应商、电芯路线、项目投资额和施工节点；当前已确定的是规模、资产所有权和 15 年商业安排。</p>
           <div class="links">
             <p>新闻链接：<a href="https://www.energy-storage.news/australias-cleanpeak-energy-to-deploy-120mwh-battery-storage-system-at-western-sydney-international-airport/">https://www.energy-storage.news/australias-cleanpeak-energy-to-deploy-120mwh-battery-storage-system-at-western-sydney-international-airport/</a></p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="segment">
-      <h2 class="segment-title">政策与贸易 · 5 条</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>中国动力电池安全新国标正式实施，新增底部撞击和快充循环后安全测试</h3>
-          <p class="date">信息日期：2026-07-01；标准状态：现行</p>
-          <div class="tags">
-            <span class="tag">板块：政策与贸易</span>
-            <span class="tag geo">国家/地区：中国</span>
-            <span class="tag company">公司/机构：市场监管总局、国家标准委、工信部、动力电池与车企</span>
-            <span class="tag topic">主题：强制标准 / 电池安全 / 快充 / 热扩散</span>
-          </div>
-          <p><span class="label">本次事件：</span>强制性国家标准 GB 38031-2025《电动汽车用动力蓄电池安全要求》于 7 月 1 日正式实施，替代 2020 版标准。新版提高热扩散测试要求，并新增电池底部撞击测试；快充电池还需先完成 300 次快充循环，再进行外部短路测试，要求不起火、不爆炸。标准由工信部主管，适用于新准入及按过渡要求切换的动力电池与整车产品。</p>
-          <p class="context"><span class="label">背景补充：</span>标准于 2025 年 3 月 28 日发布，主要起草单位包括宁德时代、国轩高科、比亚迪、中创新航、瑞浦兰钧、亿纬锂能、欣旺达以及多家中外车企。7 月 1 日后标准状态已由待实施转为现行，旧版 GB 38031-2020 废止。</p>
-          <div class="links">
-            <p>标准链接：<a href="https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AB693FAFF5D9716DF61C61D6FD2187A">https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=3AB693FAFF5D9716DF61C61D6FD2187A</a></p>
-            <p>政策说明：<a href="https://app.www.gov.cn/govdata/gov/202504/17/526982/article.html">https://app.www.gov.cn/govdata/gov/202504/17/526982/article.html</a></p>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>重庆发布 2026—2028 充电行动方案，目标累计建设 75 万个以上设施</h3>
-          <p class="date">信息日期：2026-07-07；文件印发：2026-07-06</p>
-          <div class="tags">
-            <span class="tag">板块：政策与贸易</span>
-            <span class="tag geo">国家/地区：中国 / 重庆</span>
-            <span class="tag company">公司/机构：重庆市四部门、充电运营商、重卡企业</span>
-            <span class="tag topic">主题：充电基础设施 / 超充 / 电动重卡 / 车网互动</span>
-          </div>
-          <p><span class="label">本次事件：</span>重庆市四部门联合印发电动汽车充电设施服务能力行动方案，目标到 2028 年底累计建成 75 万个以上充电设施、2,500 座以上超充站，公共充电总容量超过 750 万千瓦，可满足 200 万辆以上新能源汽车需求。方案还要求新增私人充电设施 20 万个以上，并覆盖城市、高速、农村、景区、社区和货运场景。</p>
-          <p class="context"><span class="label">背景补充：</span>重卡是单列任务：到 2028 年新建电动重卡大功率超充站 100 座以上，推广电动超充重卡不少于 1,500 辆。方案同时包含车网互动、投诉热线、收费和运维整治，以及大功率站点报装接电流程优化，执行期为 2026—2028 年。</p>
-          <div class="links">
-            <p>政策链接：<a href="https://www.cq.gov.cn/ywdt/jrcq/202607/t20260707_15802889.html">https://www.cq.gov.cn/ywdt/jrcq/202607/t20260707_15802889.html</a></p>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>印度把锂离子电池制造设备关税优惠延长至 2029 年 3 月</h3>
-          <p class="date">信息日期：2026-07-09；政策状态：立即生效</p>
-          <div class="tags">
-            <span class="tag">板块：政策与贸易</span>
-            <span class="tag geo">国家/地区：印度</span>
-            <span class="tag company">公司/机构：印度中央政府、CBIC、电池制造企业</span>
-            <span class="tag topic">主题：进口关税 / 电芯制造设备 / 本地化 / 2029</span>
-          </div>
-          <p><span class="label">本次事件：</span>印度政府把电子制造及锂离子电池生产设备的关税优惠延长至 2029 年 3 月 31 日，并立即实施。印度中央间接税和海关委员会将优惠设备清单扩展至 85 类，覆盖混料、涂布、辊压、分切、卷绕、叠片、注液、焊接、测试、化成老化、检验和包装，以及溶剂回收、除尘和污水处理等辅助设备。</p>
-          <p class="context"><span class="label">背景补充：</span>新清单替代原有豁免通知中的较窄条目，并为每类设备列明海关税则编码。政策主要降低印度尚不能广泛本地供应的专用设备进口成本，适用对象包括动力和储能电芯工厂；企业仍须满足母通知规定的指定用途和申报条件。</p>
-          <div class="links">
-            <p>新闻链接：<a href="https://economictimes.indiatimes.com/industry/cons-products/electronics/govt-extends-duty-relief-for-electronics-lithium-ion-battery-manufacturing-till-2029/articleshow/132274973.cms">https://economictimes.indiatimes.com/industry/cons-products/electronics/govt-extends-duty-relief-for-electronics-lithium-ion-battery-manufacturing-till-2029/articleshow/132274973.cms</a></p>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>马来西亚收紧整车进口纯电车准入，最低 CIF 20 万林吉特且功率不低于 180kW</h3>
-          <p class="date">信息日期：2026-07-01；政策公布：2026-05-06</p>
-          <div class="tags">
-            <span class="tag">板块：政策与贸易</span>
-            <span class="tag geo">国家/地区：马来西亚</span>
-            <span class="tag company">公司/机构：马来西亚投资、贸易与工业部，纯电车进口商</span>
-            <span class="tag topic">主题：CBU 进口 / 最低价格 / 本地组装 / 市场准入</span>
-          </div>
-          <p><span class="label">本次事件：</span>马来西亚投资、贸易与工业部规定，自 7 月 1 日起，所有以整车形式进口的纯电动车必须同时满足最低 CIF 完税前价值 20 万林吉特，以及电机功率不低于 180kW 两项条件；功率门槛由原来的 200kW 调整为 180kW。此前四年的特许准证特殊豁免已于 2025 年底到期。</p>
-          <p class="context"><span class="label">背景补充：</span>政策允许豁免期内已在库、已到港或在途的车辆按原安排售完，新增进口则适用新门槛。规则直接限制低价 CBU 电动车导入，鼓励品牌以当地组装方式进入大众市场；文件未改变 CKD 本地组装车型的准入条件。</p>
-          <div class="links">
-            <p>政策链接：<a href="https://www.miti.gov.my/miti/resources/Media%20Release/SIARAN_MEDIA_PENAMATAN_PENGECUALIAN_KHAS_6_Mei_2026_edited.pdf">https://www.miti.gov.my/miti/resources/Media%20Release/SIARAN_MEDIA_PENAMATAN_PENGECUALIAN_KHAS_6_Mei_2026_edited.pdf</a></p>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>澳大利亚 CIS 储能招标预留 2GWh，要求原住民分享至少 5% 股权或等值收入</h3>
-          <p class="date">信息日期：2026-07-09；Tender 10 截止：2026-08-18</p>
-          <div class="tags">
-            <span class="tag">板块：政策与贸易</span>
-            <span class="tag geo">国家/地区：澳大利亚</span>
-            <span class="tag company">公司/机构：DCCEEW、ASL、储能开发商、First Nations 社区</span>
-            <span class="tag topic">主题：储能招标 / 16GWh / 股权分享 / 政府承购</span>
-          </div>
-          <p><span class="label">本次事件：</span>澳大利亚容量投资计划 Tender 9 和 Tender 10 首次设置 First Nations 专项配额。Tender 10 面向 4GW/16GWh 清洁可调度容量，其中 500MW/2GWh 预留给承诺原住民社区持有至少 5% 股权、分享等值收入或采用两者组合的项目；Tender 9 的 5GW 发电招标另预留 500MW。</p>
-          <p class="context"><span class="label">背景补充：</span>Tender 10 已于 6 月 23 日开放，8 月 18 日截止，预计 12 月公布结果，并可能成为 CIS 最后一轮独立可调度容量招标。专项配额不是自动中标，项目仍须通过技术、交付能力、社区参与和系统可靠性等常规评审。</p>
-          <div class="links">
-            <p>政策链接：<a href="https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/first-nations-equity-revenue-sharing-set-aside">https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/first-nations-equity-revenue-sharing-set-aside</a></p>
-            <p>招标链接：<a href="https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/open-cis-tenders">https://www.dcceew.gov.au/energy/renewable/capacity-investment-scheme/open-cis-tenders</a></p>
           </div>
         </article>
       </div>
