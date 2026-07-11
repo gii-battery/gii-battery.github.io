@@ -337,7 +337,7 @@ function renderCard(event, index) {
 
 function siteNavigation(currentPage) {
   return `    <nav class="site-nav" aria-label="报告导航">
-      <a class="brand" href="./">GII</a>
+      <a class="brand" href="./">Lithium Industry Briefing</a>
       <div class="nav-links">
         <a${currentPage === "latest" ? ' class="current" aria-current="page"' : ""} href="./">最新报告</a>
         <a${currentPage === "archive" ? ' class="current" aria-current="page"' : ""} href="archive.html">历史报告</a>
@@ -367,7 +367,7 @@ ${cards}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${reportDate} 锂电产业链政策、镍钴锂、正极、电池、电车与储能新闻简报">
-  <title>GII 锂电产业链新闻简报 | ${reportDate}</title>
+  <title>锂电产业链新闻简报 | ${reportDate}</title>
   <style>
     :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --coral:#ffad9f; --mint:#d9f3e4; --shadow:rgba(23,50,74,.09); }
     * { box-sizing:border-box; }
@@ -420,7 +420,7 @@ ${cards}
   <main class="page">
 ${siteNavigation(currentPage)}
     <header class="masthead">
-      <p class="kicker">GII · Lithium Industry Briefing</p>
+      <p class="kicker">Lithium Industry Briefing</p>
       <h1>锂电产业链新闻简报</h1>
       <div class="meta"><span>${reportDate}</span><span>${TIME_ZONE}</span><span>资料截止 ${cutoff}</span><span>${events.length} 条新闻</span></div>
       <p class="source-note"><strong>来源覆盖：</strong>${escapeHtml(coverageNote)}</p>

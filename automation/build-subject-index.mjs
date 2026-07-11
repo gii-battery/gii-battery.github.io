@@ -83,10 +83,11 @@ function parseReport(html, report) {
 function ensureSubjectNavigation(html) {
   let updated = html
     .replaceAll("Lithium Industry Daily", "Lithium Industry Briefing")
-    .replaceAll("Lithium Industry Briefing", "GII")
+    .replaceAll("GII · Lithium Industry Briefing", "Lithium Industry Briefing")
+    .replaceAll(">GII<", ">Lithium Industry Briefing<")
     .replaceAll("锂电产业链新闻日报", "锂电产业链新闻简报")
-    .replace(/<title>锂电产业链新闻简报 \| ([^<]+)<\/title>/, "<title>GII 锂电产业链新闻简报 | $1</title>")
-    .replace("<title>历史报告 | 锂电产业链新闻简报</title>", "<title>GII | 历史报告</title>")
+    .replace(/<title>GII 锂电产业链新闻简报 \| ([^<]+)<\/title>/, "<title>锂电产业链新闻简报 | $1</title>")
+    .replace("<title>GII | 历史报告</title>", "<title>历史报告 | 锂电产业链新闻简报</title>")
     .replaceAll(">最新日报<", ">最新报告<")
     .replaceAll(">历史日报<", ">历史报告<")
     .replaceAll("查看日报", "查看报告")
@@ -144,7 +145,7 @@ ${rows}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="按公司和机构查看锂电产业链历次报告中的相关新闻">
-  <title>GII | 企业动态</title>
+  <title>企业动态 | 锂电产业链新闻简报</title>
   <style>
     :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --shadow:rgba(23,50,74,.09); }
     * { box-sizing:border-box; }
@@ -195,7 +196,7 @@ ${rows}
 <body>
   <main class="page">
     <nav class="site-nav" aria-label="报告导航">
-      <a class="brand" href="./">GII</a>
+      <a class="brand" href="./">Lithium Industry Briefing</a>
       <div class="nav-links">
         <a href="./">最新报告</a>
         <a href="archive.html">历史报告</a>
