@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>历史日报 | 锂电产业链新闻日报</title>
+  <title>历史报告 | 锂电产业链新闻简报</title>
   <style>
     :root {
       --ink: #17324a;
@@ -61,7 +61,7 @@
 
     .site-nav .brand { color: var(--blue); }
 
-    .nav-links { display: flex; gap: 18px; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
     .nav-links .current { text-decoration: underline; }
 
     .masthead {
@@ -156,42 +156,43 @@
 </head>
 <body>
   <main class="page">
-    <nav class="site-nav" aria-label="日报导航">
-      <a class="brand" href="./">Lithium Industry Daily</a>
+    <nav class="site-nav" aria-label="报告导航">
+      <a class="brand" href="./">Lithium Industry Briefing</a>
       <div class="nav-links">
-        <a href="./">最新日报</a>
-        <a class="current" href="archive.html" aria-current="page">历史日报</a>
+        <a href="./">最新报告</a>
+        <a class="current" href="archive.html" aria-current="page">历史报告</a>
+        <a href="subjects.html">主体归纳</a>
       </div>
     </nav>
 
     <header class="masthead">
       <p class="kicker">Daily Archive</p>
-      <h1>历史日报</h1>
-      <p class="intro">按发布日期查看锂电产业链日报。首页始终展示最新一期，历史版本不会被覆盖。</p>
+      <h1>历史报告</h1>
+      <p class="intro">按发布日期查看锂电产业链报告。首页始终展示最新一期，历史版本不会被覆盖。</p>
     </header>
 
-    <section class="archive-list" aria-label="历史日报列表">
+    <section class="archive-list" aria-label="历史报告列表">
       <!-- REPORT_LIST_START -->
       <article class="archive-row">
         <time datetime="2026-07-11">2026-07-11</time>
         <div>
-          <h2>锂电产业链新闻日报</h2>
+          <h2>锂电产业链新闻简报</h2>
           <p>23 条新闻 · 政策与贸易、上游镍钴锂、电池与装机、终端电车、终端储能</p>
         </div>
-        <a class="open-link" href="daily-2026-07-11.html">查看日报 →</a>
+        <a class="open-link" href="daily-2026-07-11.html">查看报告 →</a>
       </article>
       <article class="archive-row">
         <time datetime="2026-07-10">2026-07-10</time>
         <div>
-          <h2>锂电产业链新闻日报</h2>
+          <h2>锂电产业链新闻简报</h2>
           <p>29 条新闻 · 政策与贸易、上游镍钴锂、正极与前驱体、电池与装机、终端电车、终端储能</p>
         </div>
-        <a class="open-link" href="daily-2026-07-10.html">查看日报 →</a>
+        <a class="open-link" href="daily-2026-07-10.html">查看报告 →</a>
       </article>
       <!-- REPORT_LIST_END -->
     </section>
 
-    <footer>计划更新时间：每天 19:00（Asia/Shanghai）。</footer>
+    <footer>计划更新时间：每周一、周三、周五 19:00（Asia/Shanghai）。</footer>
   </main>
 </body>
 </html>

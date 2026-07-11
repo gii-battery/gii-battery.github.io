@@ -1,9 +1,9 @@
 # Cloud daily publishing
 
-The `Generate lithium industry daily` GitHub Actions workflow starts at 18:30
-Asia/Shanghai, researches the current report with the OpenAI Responses API and
-web search, validates the result, waits until 19:00, and commits the generated
-site files to the repository.
+The `Generate lithium industry briefing` workflow runs on Monday, Wednesday and
+Friday. It starts at 18:30 Asia/Shanghai, researches events since the previous
+published report with the OpenAI Responses API and web search, validates the
+result, waits until 19:00, and commits the report and subject index.
 
 Required repository secret:
 

@@ -1,9 +1,9 @@
-name: Generate lithium industry daily
+name: Generate lithium industry briefing
 
 on:
   schedule:
-    # 10:30 UTC is 18:30 in Asia/Shanghai. The job waits to publish at 19:00.
-    - cron: "30 10 * * *"
+    # Monday, Wednesday and Friday. 10:30 UTC is 18:30 in Asia/Shanghai.
+    - cron: "30 10 * * 1,3,5"
   push:
     paths:
       - "automation/run-now"
@@ -46,7 +46,7 @@ jobs:
             exit 1
           fi
 
-      - name: Research and build today's report
+      - name: Research and build the interval report
         run: node automation/generate-daily.mjs "${{ inputs.report_date }}"
 
       - name: Wait until 19:00 Asia/Shanghai
@@ -58,7 +58,7 @@ jobs:
         run: |
           git config user.name "Lithium Daily Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add index.html archive.html reports.json daily-*.html
+          git add index.html archive.html subjects.html subjects.json reports.json daily-*.html
           if git diff --cached --quiet; then
             echo "No website changes to publish."
             exit 0

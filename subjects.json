@@ -1,0 +1,1525 @@
+{
+  "updated_at": "2026-07-11T14:04:18.706Z",
+  "subjects": [
+    {
+      "id": "subject-19z0bqb",
+      "name": "比亚迪",
+      "count": 3,
+      "items": [
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "比亚迪第1700万辆新能源车下线，海豹08搭载第二代刀片电池",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "比亚迪与Masdar签署11.275GWh储能设备协议",
+          "segment": "终端储能"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-1pza3xe",
+      "name": "宁德时代",
+      "count": 3,
+      "items": [
+        {
+          "subject": "宁德时代",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "容百科技披露磷酸锰铁锂满产满销，钠电正极进入规模化出货",
+          "segment": "正极与前驱体"
+        },
+        {
+          "subject": "宁德时代",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "宁德时代发布天行 II 轻商超充版，峰值 8C、6 分 48 秒充至 80%",
+          "segment": "电池与装机"
+        },
+        {
+          "subject": "宁德时代",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1x8on4v",
+      "name": "中国汽车动力电池产业创新联盟",
+      "count": 3,
+      "items": [
+        {
+          "subject": "中国汽车动力电池产业创新联盟",
+          "date": "2026-06-30",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "电池联盟预计2026年中国动力电池装机需求888.7GWh，同比增长15.8%",
+          "segment": "电池与装机"
+        },
+        {
+          "subject": "中国汽车动力电池产业创新联盟",
+          "date": "2026-06-30",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质",
+          "segment": "电池与装机"
+        },
+        {
+          "subject": "中国汽车动力电池产业创新联盟",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-4m57m8",
+      "name": "工业和信息化部",
+      "count": 2,
+      "items": [
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-07-03",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国四部门取消部分新能源商用车车船税优惠，2027年起执行",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-06-30",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-nb3fd4",
+      "name": "小米汽车",
+      "count": 2,
+      "items": [
+        {
+          "subject": "小米汽车",
+          "date": "2026-07-08",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "小米汽车发布SkyNomad新车系，首款车型规格与投产计划待公布",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "小米汽车",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-11h8650",
+      "name": "小鹏汽车",
+      "count": 2,
+      "items": [
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-19zfmlq",
+      "name": "Frontier Power USA",
+      "count": 2,
+      "items": [
+        {
+          "subject": "Frontier Power USA",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
+          "segment": "终端储能"
+        },
+        {
+          "subject": "Frontier Power USA",
+          "date": "2026-07-07",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Frontier Power USA选择Stella四个项目，形成920MWh储能组合",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-5tpkvr",
+      "name": "99",
+      "count": 1,
+      "items": [
+        {
+          "subject": "99",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-yuvwqa",
+      "name": "比亚迪半导体",
+      "count": 1,
+      "items": [
+        {
+          "subject": "比亚迪半导体",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "比亚迪半导体 BMS AFE 芯片累计出货超过 1 亿颗",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-1yscx6a",
+      "name": "财政部",
+      "count": 1,
+      "items": [
+        {
+          "subject": "财政部",
+          "date": "2026-07-03",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国四部门取消部分新能源商用车车船税优惠，2027年起执行",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1hazgp3",
+      "name": "大众集团",
+      "count": 1,
+      "items": [
+        {
+          "subject": "大众集团",
+          "date": "2026-07-10",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "大众集团二季度销量降8.6%，宣布车型数量最多削减一半",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-lesbmj",
+      "name": "广汽国际",
+      "count": 1,
+      "items": [
+        {
+          "subject": "广汽国际",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-npb4kt",
+      "name": "广汽集团",
+      "count": 1,
+      "items": [
+        {
+          "subject": "广汽集团",
+          "date": "2026-07-10",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "广汽与引望合作车型启境GT7启动全国交付，支持6C超充",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-13tlbxg",
+      "name": "广汽能源",
+      "count": 1,
+      "items": [
+        {
+          "subject": "广汽能源",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-6xogt2",
+      "name": "国家标准化管理委员会",
+      "count": 1,
+      "items": [
+        {
+          "subject": "国家标准化管理委员会",
+          "date": "2026-07-01",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1e8v0du",
+      "name": "国家发展改革委",
+      "count": 1,
+      "items": [
+        {
+          "subject": "国家发展改革委",
+          "date": "2026-07-06",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-130idy5",
+      "name": "国家能源局",
+      "count": 1,
+      "items": [
+        {
+          "subject": "国家能源局",
+          "date": "2026-07-06",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-zhklg6",
+      "name": "国家市场监督管理总局",
+      "count": 1,
+      "items": [
+        {
+          "subject": "国家市场监督管理总局",
+          "date": "2026-07-01",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1lk0yn6",
+      "name": "海洋网",
+      "count": 1,
+      "items": [
+        {
+          "subject": "海洋网",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-ty8aqb",
+      "name": "吉利集团",
+      "count": 1,
+      "items": [
+        {
+          "subject": "吉利集团",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "吉利银河 TT 全球首发，采用 800V 架构和激光雷达辅助驾驶",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-horzz4",
+      "name": "吉利银河",
+      "count": 1,
+      "items": [
+        {
+          "subject": "吉利银河",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "吉利银河 TT 全球首发，采用 800V 架构和激光雷达辅助驾驶",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-1a0robe",
+      "name": "交通运输部",
+      "count": 1,
+      "items": [
+        {
+          "subject": "交通运输部",
+          "date": "2026-07-03",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国四部门取消部分新能源商用车车船税优惠，2027年起执行",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-k52y93",
+      "name": "晶科储能",
+      "count": 1,
+      "items": [
+        {
+          "subject": "晶科储能",
+          "date": "2026-07-01",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "晶科储能与Taliva Energy签署东欧400MWh项目组合合同",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-10kfnzf",
+      "name": "零跑汽车",
+      "count": 1,
+      "items": [
+        {
+          "subject": "零跑汽车",
+          "date": "2026-07-06",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-5vlopf",
+      "name": "美国国防后勤局",
+      "count": 1,
+      "items": [
+        {
+          "subject": "美国国防后勤局",
+          "date": "2026-07-07",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "美国国防后勤局招标五年采购1.62万吨电池级碳酸锂",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1ylqdug",
+      "name": "奇瑞集团",
+      "count": 1,
+      "items": [
+        {
+          "subject": "奇瑞集团",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-11l3frs",
+      "name": "启境汽车",
+      "count": 1,
+      "items": [
+        {
+          "subject": "启境汽车",
+          "date": "2026-07-10",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "广汽与引望合作车型启境GT7启动全国交付，支持6C超充",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-oepl53",
+      "name": "容百科技",
+      "count": 1,
+      "items": [
+        {
+          "subject": "容百科技",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "容百科技披露磷酸锰铁锂满产满销，钠电正极进入规模化出货",
+          "segment": "正极与前驱体"
+        }
+      ]
+    },
+    {
+      "id": "subject-18dbx7n",
+      "name": "税务总局",
+      "count": 1,
+      "items": [
+        {
+          "subject": "税务总局",
+          "date": "2026-07-03",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国四部门取消部分新能源商用车车船税优惠，2027年起执行",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-izzdt3",
+      "name": "天赐材料",
+      "count": 1,
+      "items": [
+        {
+          "subject": "天赐材料",
+          "date": "2026-07-10",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "天赐材料预计上半年净利27亿至30亿元，电解液出货同比增逾40%",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-1ytvc1k",
+      "name": "蔚来",
+      "count": 1,
+      "items": [
+        {
+          "subject": "蔚来",
+          "date": "2026-07-10",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "蔚来开始交付五座版ES8，最新一代累计交付12万辆",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-1w8bi0i",
+      "name": "欣旺达",
+      "count": 1,
+      "items": [
+        {
+          "subject": "欣旺达",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-2wa6b5",
+      "name": "引望",
+      "count": 1,
+      "items": [
+        {
+          "subject": "引望",
+          "date": "2026-07-10",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "广汽与引望合作车型启境GT7启动全国交付，支持6C超充",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-55d3w3",
+      "name": "中创新航",
+      "count": 1,
+      "items": [
+        {
+          "subject": "中创新航",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-jdafbm",
+      "name": "中关村储能产业技术联盟",
+      "count": 1,
+      "items": [
+        {
+          "subject": "中关村储能产业技术联盟",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-bfp5x7",
+      "name": "A1 Lithium",
+      "count": 1,
+      "items": [
+        {
+          "subject": "A1 Lithium",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Anson 为犹他 Green River 锂项目申请约 8,500 万美元美国能源部净资助",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-89mim1",
+      "name": "ABN AMRO",
+      "count": 1,
+      "items": [
+        {
+          "subject": "ABN AMRO",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1l230lx",
+      "name": "AIFFP",
+      "count": 1,
+      "items": [
+        {
+          "subject": "AIFFP",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-6gnqzi",
+      "name": "Alpiq",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Alpiq",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Alpiq 收购 Harmony Energy 90% 股权，纳入约 400MW 在建储能资产",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-qmuu6o",
+      "name": "Alternergy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Alternergy",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-nhwgel",
+      "name": "Amazon",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Amazon",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "European Energy完成Winton North光储融资，Amazon追加电池购电协议",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-3dhi9b",
+      "name": "Anson Resources",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Anson Resources",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Anson 为犹他 Green River 锂项目申请约 8,500 万美元美国能源部净资助",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-rf2yuz",
+      "name": "Aqua Metals",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Aqua Metals",
+          "date": "2026-07-07",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Aqua Metals推进Headwaters ARC回收园区，首阶段规划锂盐与黑粉产线",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1kq0fyh",
+      "name": "Autoliv",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Autoliv",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-1i77wfn",
+      "name": "Black Giant SpA",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Black Giant SpA",
+          "date": "2026-07-06",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-tfg897",
+      "name": "BNP Paribas",
+      "count": 1,
+      "items": [
+        {
+          "subject": "BNP Paribas",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1p3begu",
+      "name": "Cerberus",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Cerberus",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-14gk9ib",
+      "name": "CleanPeak Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "CleanPeak Energy",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "CleanPeak 签署西悉尼机场 15 年供能协议，配建 30MW/120MWh 储能",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-hq3qv4",
+      "name": "Critical Metals Corp",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Critical Metals Corp",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Critical Metals与European Lithium修订收购协议，Wolfsberg交易文件拟于夏季发出",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1s35vnd",
+      "name": "Energy Vault",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Energy Vault",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-qpl4pj",
+      "name": "EnergyX",
+      "count": 1,
+      "items": [
+        {
+          "subject": "EnergyX",
+          "date": "2026-07-06",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1ijjgft",
+      "name": "Eni",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Eni",
+          "date": "2026-07-06",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-mtx5yi",
+      "name": "Envision",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Envision",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1qvaoqy",
+      "name": "Eos",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Eos",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1i4amnq",
+      "name": "Eos Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Eos Energy",
+          "date": "2026-07-07",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Frontier Power USA选择Stella四个项目，形成920MWh储能组合",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-ow7y80",
+      "name": "European Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "European Energy",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "European Energy完成Winton North光储融资，Amazon追加电池购电协议",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1yc2ujc",
+      "name": "European Lithium",
+      "count": 1,
+      "items": [
+        {
+          "subject": "European Lithium",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Critical Metals与European Lithium修订收购协议，Wolfsberg交易文件拟于夏季发出",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1rwzjtu",
+      "name": "Evolution Mining",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Evolution Mining",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-12nb85j",
+      "name": "ExGen Resources",
+      "count": 1,
+      "items": [
+        {
+          "subject": "ExGen Resources",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "ExGen完成收购内华达三处锂资产权益，支付股份进入交割安排",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-4d0paf",
+      "name": "Field",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Field",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-rp1ckx",
+      "name": "GM",
+      "count": 1,
+      "items": [
+        {
+          "subject": "GM",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-17zphzd",
+      "name": "Green Energy Storage",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Green Energy Storage",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1gopmaf",
+      "name": "Greenchoice",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Greenchoice",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-16f479a",
+      "name": "GreenV",
+      "count": 1,
+      "items": [
+        {
+          "subject": "GreenV",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-dvrqcf",
+      "name": "Harmony Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Harmony Energy",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Alpiq 收购 Harmony Energy 90% 股权，纳入约 400MW 在建储能资产",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1fxc6zd",
+      "name": "Honda",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Honda",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-1yyfuvy",
+      "name": "ICO",
+      "count": 1,
+      "items": [
+        {
+          "subject": "ICO",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1sb12cb",
+      "name": "ING",
+      "count": 1,
+      "items": [
+        {
+          "subject": "ING",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1a55u1i",
+      "name": "JAECOO",
+      "count": 1,
+      "items": [
+        {
+          "subject": "JAECOO",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-qlc696",
+      "name": "JETOUR",
+      "count": 1,
+      "items": [
+        {
+          "subject": "JETOUR",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-1pepzkz",
+      "name": "Jupiter Power",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Jupiter Power",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-w8uiwz",
+      "name": "L-H Battery",
+      "count": 1,
+      "items": [
+        {
+          "subject": "L-H Battery",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-ftjer3",
+      "name": "LG Energy Solution",
+      "count": 1,
+      "items": [
+        {
+          "subject": "LG Energy Solution",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-qizgg1",
+      "name": "LGES Vertech",
+      "count": 1,
+      "items": [
+        {
+          "subject": "LGES Vertech",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-11hv4gg",
+      "name": "Luxeed",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Luxeed",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-11fqi9z",
+      "name": "Masdar",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Masdar",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "比亚迪与Masdar签署11.275GWh储能设备协议",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1l87jog",
+      "name": "MONA",
+      "count": 1,
+      "items": [
+        {
+          "subject": "MONA",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-ovnj14",
+      "name": "Mopar",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Mopar",
+          "date": "2026-07-06",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-scky",
+      "name": "Opdenergy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Opdenergy",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-n468ku",
+      "name": "Peak Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Peak Energy",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-mi71xt",
+      "name": "PPUC",
+      "count": 1,
+      "items": [
+        {
+          "subject": "PPUC",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-64z54c",
+      "name": "Precision Periodic",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Precision Periodic",
+          "date": "2026-07-07",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Precision Periodic拟在佛州建设模块化镍钴锰电池级精炼厂",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-gv6cxp",
+      "name": "Rabobank",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Rabobank",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-lwf65n",
+      "name": "RESPEC",
+      "count": 1,
+      "items": [
+        {
+          "subject": "RESPEC",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-t1j67t",
+      "name": "RWE",
+      "count": 1,
+      "items": [
+        {
+          "subject": "RWE",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-3grdre",
+      "name": "SMBC",
+      "count": 1,
+      "items": [
+        {
+          "subject": "SMBC",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-12gr0et",
+      "name": "Solar Pacific",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Solar Pacific",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1epmj7s",
+      "name": "Stella Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Stella Energy",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-9hp0sc",
+      "name": "Stella Energy Solutions",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Stella Energy Solutions",
+          "date": "2026-07-07",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Frontier Power USA选择Stella四个项目，形成920MWh储能组合",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-b9wknu",
+      "name": "Stellantis",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Stellantis",
+          "date": "2026-07-06",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-19ozhy6",
+      "name": "Sungrow",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Sungrow",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Field 为英国两座储能项目完成融资，合计 239MW/1GWh",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-ui5nuw",
+      "name": "Surge Battery Metals",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Surge Battery Metals",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1huv9v0",
+      "name": "Taliva Energy",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Taliva Energy",
+          "date": "2026-07-01",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "晶科储能与Taliva Energy签署东欧400MWh项目组合合同",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1ys5jus",
+      "name": "Tesla",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Tesla",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "Tesla 开放柏林电芯产线给初创企业测试，18GWh 扩产项目同步推进",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-13l3e22",
+      "name": "Vopak",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Vopak",
+          "date": "2026-07-02",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "headline": "Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目",
+          "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-y6vvyo",
+      "name": "Western Sydney International Airport",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Western Sydney International Airport",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "headline": "CleanPeak 签署西悉尼机场 15 年供能协议，配建 30MW/120MWh 储能",
+          "segment": "终端储能"
+        }
+      ]
+    }
+  ]
+}

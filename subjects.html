@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="按公司和机构查看锂电产业链历次报告中的相关新闻">
+  <title>主体归纳 | 锂电产业链新闻简报</title>
+  <style>
+    :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --shadow:rgba(23,50,74,.09); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; background:#eef7fd; }
+    body { margin:0; color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.65; letter-spacing:0; background:repeating-linear-gradient(0deg,rgba(23,105,170,.025) 0,rgba(23,105,170,.025) 1px,transparent 1px,transparent 28px),var(--paper); }
+    a { color:var(--blue-deep); text-underline-offset:3px; }
+    .page { width:min(980px,calc(100% - 32px)); margin:0 auto; padding:28px 0 56px; }
+    .site-nav { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:18px; padding:0 3px 12px; border-bottom:2px dashed var(--line); }
+    .site-nav a { color:var(--blue-deep); font-weight:800; text-decoration:none; }
+    .site-nav a:hover,.site-nav a:focus-visible,.site-nav .current { text-decoration:underline; }
+    .site-nav .brand { color:var(--blue); }
+    .nav-links { display:flex; flex-wrap:wrap; gap:18px; }
+    .masthead { padding:26px 28px; border:2px dashed var(--line); border-radius:8px; background:#f5fbff; box-shadow:0 12px 28px var(--shadow); }
+    .kicker { margin:0 0 6px; color:var(--blue-deep); font-size:.9rem; font-weight:800; text-transform:uppercase; }
+    h1,h2,h3 { letter-spacing:0; }
+    h1 { margin:0; color:var(--blue); font-size:2.2rem; line-height:1.2; }
+    .intro { margin:12px 0 0; color:var(--muted); }
+    .filter { width:100%; margin:18px 0 12px; padding:11px 13px; border:1px solid #a8cee9; border-radius:6px; background:#fff; color:var(--ink); font:inherit; }
+    .subject-chips { display:flex; flex-wrap:wrap; gap:8px; padding:14px; border:1px dashed var(--line); border-radius:8px; background:#f5fbff; }
+    .subject-chip { display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:6px 10px; border:1px solid #a8cee9; border-radius:6px; background:#fff; font-size:.88rem; font-weight:800; text-decoration:none; }
+    .subject-chip span { display:grid; place-items:center; min-width:22px; height:22px; padding:0 5px; border-radius:999px; background:var(--yellow); font-size:.75rem; }
+    .subject-section { scroll-margin-top:18px; margin-top:26px; border-top:2px dashed var(--line); }
+    .subject-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 2px 8px; }
+    .subject-heading h2 { margin:0; color:var(--blue-deep); font-size:1.3rem; }
+    .subject-heading span { color:var(--muted); font-weight:750; }
+    .news-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 20px; padding:16px; border-bottom:1px dashed #b2d0e6; background:#fff; }
+    .news-meta { display:flex; flex-wrap:wrap; gap:8px; color:var(--muted); font-size:.82rem; }
+    .news-meta span { padding:1px 7px; border-radius:999px; background:var(--blue-pale); }
+    .news-row h3 { grid-column:1; margin:0; font-size:1rem; line-height:1.5; }
+    .news-row > a { grid-column:2; grid-row:1 / span 2; align-self:center; font-size:.86rem; font-weight:800; white-space:nowrap; }
+    .empty { display:none; margin:20px 0; color:var(--muted); }
+    footer { margin-top:30px; color:var(--muted); font-size:.86rem; }
+    [hidden] { display:none !important; }
+    @media (max-width:680px) { .page{width:min(100% - 20px,980px);padding-top:14px}.site-nav{align-items:flex-start}.site-nav .brand{max-width:130px}.nav-links{gap:10px}.masthead{padding:20px}h1{font-size:1.75rem}.news-row{grid-template-columns:1fr}.news-row > a{grid-column:1;grid-row:auto;justify-self:start}.subject-heading{align-items:baseline} }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="site-nav" aria-label="报告导航">
+      <a class="brand" href="./">Lithium Industry Briefing</a>
+      <div class="nav-links">
+        <a href="./">最新报告</a>
+        <a href="archive.html">历史报告</a>
+        <a class="current" aria-current="page" href="subjects.html">主体归纳</a>
+      </div>
+    </nav>
+    <header class="masthead">
+      <p class="kicker">Subject Index</p>
+      <h1>主体归纳</h1>
+      <p class="intro">按公司或机构汇总历次报告中的相关新闻。</p>
+      <input class="filter" id="subject-filter" type="search" placeholder="搜索公司或机构" autocomplete="off">
+      <div class="subject-chips" aria-label="主体列表">
+        <a class="subject-chip" data-subject-name="比亚迪" href="#subject-19z0bqb">比亚迪<span>3</span></a>
+        <a class="subject-chip" data-subject-name="宁德时代" href="#subject-1pza3xe">宁德时代<span>3</span></a>
+        <a class="subject-chip" data-subject-name="中国汽车动力电池产业创新联盟" href="#subject-1x8on4v">中国汽车动力电池产业创新联盟<span>3</span></a>
+        <a class="subject-chip" data-subject-name="工业和信息化部" href="#subject-4m57m8">工业和信息化部<span>2</span></a>
+        <a class="subject-chip" data-subject-name="小米汽车" href="#subject-nb3fd4">小米汽车<span>2</span></a>
+        <a class="subject-chip" data-subject-name="小鹏汽车" href="#subject-11h8650">小鹏汽车<span>2</span></a>
+        <a class="subject-chip" data-subject-name="frontier power usa" href="#subject-19zfmlq">Frontier Power USA<span>2</span></a>
+        <a class="subject-chip" data-subject-name="99" href="#subject-5tpkvr">99<span>1</span></a>
+        <a class="subject-chip" data-subject-name="比亚迪半导体" href="#subject-yuvwqa">比亚迪半导体<span>1</span></a>
+        <a class="subject-chip" data-subject-name="财政部" href="#subject-1yscx6a">财政部<span>1</span></a>
+        <a class="subject-chip" data-subject-name="大众集团" href="#subject-1hazgp3">大众集团<span>1</span></a>
+        <a class="subject-chip" data-subject-name="广汽国际" href="#subject-lesbmj">广汽国际<span>1</span></a>
+        <a class="subject-chip" data-subject-name="广汽集团" href="#subject-npb4kt">广汽集团<span>1</span></a>
+        <a class="subject-chip" data-subject-name="广汽能源" href="#subject-13tlbxg">广汽能源<span>1</span></a>
+        <a class="subject-chip" data-subject-name="国家标准化管理委员会" href="#subject-6xogt2">国家标准化管理委员会<span>1</span></a>
+        <a class="subject-chip" data-subject-name="国家发展改革委" href="#subject-1e8v0du">国家发展改革委<span>1</span></a>
+        <a class="subject-chip" data-subject-name="国家能源局" href="#subject-130idy5">国家能源局<span>1</span></a>
+        <a class="subject-chip" data-subject-name="国家市场监督管理总局" href="#subject-zhklg6">国家市场监督管理总局<span>1</span></a>
+        <a class="subject-chip" data-subject-name="海洋网" href="#subject-1lk0yn6">海洋网<span>1</span></a>
+        <a class="subject-chip" data-subject-name="吉利集团" href="#subject-ty8aqb">吉利集团<span>1</span></a>
+        <a class="subject-chip" data-subject-name="吉利银河" href="#subject-horzz4">吉利银河<span>1</span></a>
+        <a class="subject-chip" data-subject-name="交通运输部" href="#subject-1a0robe">交通运输部<span>1</span></a>
+        <a class="subject-chip" data-subject-name="晶科储能" href="#subject-k52y93">晶科储能<span>1</span></a>
+        <a class="subject-chip" data-subject-name="零跑汽车" href="#subject-10kfnzf">零跑汽车<span>1</span></a>
+        <a class="subject-chip" data-subject-name="美国国防后勤局" href="#subject-5vlopf">美国国防后勤局<span>1</span></a>
+        <a class="subject-chip" data-subject-name="奇瑞集团" href="#subject-1ylqdug">奇瑞集团<span>1</span></a>
+        <a class="subject-chip" data-subject-name="启境汽车" href="#subject-11l3frs">启境汽车<span>1</span></a>
+        <a class="subject-chip" data-subject-name="容百科技" href="#subject-oepl53">容百科技<span>1</span></a>
+        <a class="subject-chip" data-subject-name="税务总局" href="#subject-18dbx7n">税务总局<span>1</span></a>
+        <a class="subject-chip" data-subject-name="天赐材料" href="#subject-izzdt3">天赐材料<span>1</span></a>
+        <a class="subject-chip" data-subject-name="蔚来" href="#subject-1ytvc1k">蔚来<span>1</span></a>
+        <a class="subject-chip" data-subject-name="欣旺达" href="#subject-1w8bi0i">欣旺达<span>1</span></a>
+        <a class="subject-chip" data-subject-name="引望" href="#subject-2wa6b5">引望<span>1</span></a>
+        <a class="subject-chip" data-subject-name="中创新航" href="#subject-55d3w3">中创新航<span>1</span></a>
+        <a class="subject-chip" data-subject-name="中关村储能产业技术联盟" href="#subject-jdafbm">中关村储能产业技术联盟<span>1</span></a>
+        <a class="subject-chip" data-subject-name="a1 lithium" href="#subject-bfp5x7">A1 Lithium<span>1</span></a>
+        <a class="subject-chip" data-subject-name="abn amro" href="#subject-89mim1">ABN AMRO<span>1</span></a>
+        <a class="subject-chip" data-subject-name="aiffp" href="#subject-1l230lx">AIFFP<span>1</span></a>
+        <a class="subject-chip" data-subject-name="alpiq" href="#subject-6gnqzi">Alpiq<span>1</span></a>
+        <a class="subject-chip" data-subject-name="alternergy" href="#subject-qmuu6o">Alternergy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="amazon" href="#subject-nhwgel">Amazon<span>1</span></a>
+        <a class="subject-chip" data-subject-name="anson resources" href="#subject-3dhi9b">Anson Resources<span>1</span></a>
+        <a class="subject-chip" data-subject-name="aqua metals" href="#subject-rf2yuz">Aqua Metals<span>1</span></a>
+        <a class="subject-chip" data-subject-name="autoliv" href="#subject-1kq0fyh">Autoliv<span>1</span></a>
+        <a class="subject-chip" data-subject-name="black giant spa" href="#subject-1i77wfn">Black Giant SpA<span>1</span></a>
+        <a class="subject-chip" data-subject-name="bnp paribas" href="#subject-tfg897">BNP Paribas<span>1</span></a>
+        <a class="subject-chip" data-subject-name="cerberus" href="#subject-1p3begu">Cerberus<span>1</span></a>
+        <a class="subject-chip" data-subject-name="cleanpeak energy" href="#subject-14gk9ib">CleanPeak Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="critical metals corp" href="#subject-hq3qv4">Critical Metals Corp<span>1</span></a>
+        <a class="subject-chip" data-subject-name="energy vault" href="#subject-1s35vnd">Energy Vault<span>1</span></a>
+        <a class="subject-chip" data-subject-name="energyx" href="#subject-qpl4pj">EnergyX<span>1</span></a>
+        <a class="subject-chip" data-subject-name="eni" href="#subject-1ijjgft">Eni<span>1</span></a>
+        <a class="subject-chip" data-subject-name="envision" href="#subject-mtx5yi">Envision<span>1</span></a>
+        <a class="subject-chip" data-subject-name="eos" href="#subject-1qvaoqy">Eos<span>1</span></a>
+        <a class="subject-chip" data-subject-name="eos energy" href="#subject-1i4amnq">Eos Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="european energy" href="#subject-ow7y80">European Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="european lithium" href="#subject-1yc2ujc">European Lithium<span>1</span></a>
+        <a class="subject-chip" data-subject-name="evolution mining" href="#subject-1rwzjtu">Evolution Mining<span>1</span></a>
+        <a class="subject-chip" data-subject-name="exgen resources" href="#subject-12nb85j">ExGen Resources<span>1</span></a>
+        <a class="subject-chip" data-subject-name="field" href="#subject-4d0paf">Field<span>1</span></a>
+        <a class="subject-chip" data-subject-name="gm" href="#subject-rp1ckx">GM<span>1</span></a>
+        <a class="subject-chip" data-subject-name="green energy storage" href="#subject-17zphzd">Green Energy Storage<span>1</span></a>
+        <a class="subject-chip" data-subject-name="greenchoice" href="#subject-1gopmaf">Greenchoice<span>1</span></a>
+        <a class="subject-chip" data-subject-name="greenv" href="#subject-16f479a">GreenV<span>1</span></a>
+        <a class="subject-chip" data-subject-name="harmony energy" href="#subject-dvrqcf">Harmony Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="honda" href="#subject-1fxc6zd">Honda<span>1</span></a>
+        <a class="subject-chip" data-subject-name="ico" href="#subject-1yyfuvy">ICO<span>1</span></a>
+        <a class="subject-chip" data-subject-name="ing" href="#subject-1sb12cb">ING<span>1</span></a>
+        <a class="subject-chip" data-subject-name="jaecoo" href="#subject-1a55u1i">JAECOO<span>1</span></a>
+        <a class="subject-chip" data-subject-name="jetour" href="#subject-qlc696">JETOUR<span>1</span></a>
+        <a class="subject-chip" data-subject-name="jupiter power" href="#subject-1pepzkz">Jupiter Power<span>1</span></a>
+        <a class="subject-chip" data-subject-name="l-h battery" href="#subject-w8uiwz">L-H Battery<span>1</span></a>
+        <a class="subject-chip" data-subject-name="lg energy solution" href="#subject-ftjer3">LG Energy Solution<span>1</span></a>
+        <a class="subject-chip" data-subject-name="lges vertech" href="#subject-qizgg1">LGES Vertech<span>1</span></a>
+        <a class="subject-chip" data-subject-name="luxeed" href="#subject-11hv4gg">Luxeed<span>1</span></a>
+        <a class="subject-chip" data-subject-name="masdar" href="#subject-11fqi9z">Masdar<span>1</span></a>
+        <a class="subject-chip" data-subject-name="mona" href="#subject-1l87jog">MONA<span>1</span></a>
+        <a class="subject-chip" data-subject-name="mopar" href="#subject-ovnj14">Mopar<span>1</span></a>
+        <a class="subject-chip" data-subject-name="opdenergy" href="#subject-scky">Opdenergy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="peak energy" href="#subject-n468ku">Peak Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="ppuc" href="#subject-mi71xt">PPUC<span>1</span></a>
+        <a class="subject-chip" data-subject-name="precision periodic" href="#subject-64z54c">Precision Periodic<span>1</span></a>
+        <a class="subject-chip" data-subject-name="rabobank" href="#subject-gv6cxp">Rabobank<span>1</span></a>
+        <a class="subject-chip" data-subject-name="respec" href="#subject-lwf65n">RESPEC<span>1</span></a>
+        <a class="subject-chip" data-subject-name="rwe" href="#subject-t1j67t">RWE<span>1</span></a>
+        <a class="subject-chip" data-subject-name="smbc" href="#subject-3grdre">SMBC<span>1</span></a>
+        <a class="subject-chip" data-subject-name="solar pacific" href="#subject-12gr0et">Solar Pacific<span>1</span></a>
+        <a class="subject-chip" data-subject-name="stella energy" href="#subject-1epmj7s">Stella Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="stella energy solutions" href="#subject-9hp0sc">Stella Energy Solutions<span>1</span></a>
+        <a class="subject-chip" data-subject-name="stellantis" href="#subject-b9wknu">Stellantis<span>1</span></a>
+        <a class="subject-chip" data-subject-name="sungrow" href="#subject-19ozhy6">Sungrow<span>1</span></a>
+        <a class="subject-chip" data-subject-name="surge battery metals" href="#subject-ui5nuw">Surge Battery Metals<span>1</span></a>
+        <a class="subject-chip" data-subject-name="taliva energy" href="#subject-1huv9v0">Taliva Energy<span>1</span></a>
+        <a class="subject-chip" data-subject-name="tesla" href="#subject-1ys5jus">Tesla<span>1</span></a>
+        <a class="subject-chip" data-subject-name="vopak" href="#subject-13l3e22">Vopak<span>1</span></a>
+        <a class="subject-chip" data-subject-name="western sydney international airport" href="#subject-y6vvyo">Western Sydney International Airport<span>1</span></a>
+      </div>
+      <p class="empty" id="empty-state">没有匹配的主体。</p>
+    </header>
+    <section class="subject-section" id="subject-19z0bqb" data-subject-name="比亚迪">
+      <div class="subject-heading"><h2>比亚迪</h2><span>3 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端电车</span></div>
+          <h3>比亚迪第1700万辆新能源车下线，海豹08搭载第二代刀片电池</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>比亚迪与Masdar签署11.275GWh储能设备协议</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端电车</span></div>
+          <h3>比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1pza3xe" data-subject-name="宁德时代">
+      <div class="subject-heading"><h2>宁德时代</h2><span>3 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>正极与前驱体</span></div>
+          <h3>容百科技披露磷酸锰铁锂满产满销，钠电正极进入规模化出货</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>电池与装机</span></div>
+          <h3>宁德时代发布天行 II 轻商超充版，峰值 8C、6 分 48 秒充至 80%</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-29">2026-06-29</time><span>政策与贸易</span></div>
+          <h3>中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1x8on4v" data-subject-name="中国汽车动力电池产业创新联盟">
+      <div class="subject-heading"><h2>中国汽车动力电池产业创新联盟</h2><span>3 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-30">2026-06-30</time><span>电池与装机</span></div>
+          <h3>电池联盟预计2026年中国动力电池装机需求888.7GWh，同比增长15.8%</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-30">2026-06-30</time><span>电池与装机</span></div>
+          <h3>工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-29">2026-06-29</time><span>政策与贸易</span></div>
+          <h3>中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-4m57m8" data-subject-name="工业和信息化部">
+      <div class="subject-heading"><h2>工业和信息化部</h2><span>2 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-03">2026-07-03</time><span>政策与贸易</span></div>
+          <h3>中国四部门取消部分新能源商用车车船税优惠，2027年起执行</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-30">2026-06-30</time><span>电池与装机</span></div>
+          <h3>工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-nb3fd4" data-subject-name="小米汽车">
+      <div class="subject-heading"><h2>小米汽车</h2><span>2 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>小米汽车发布SkyNomad新车系，首款车型规格与投产计划待公布</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-11h8650" data-subject-name="小鹏汽车">
+      <div class="subject-heading"><h2>小鹏汽车</h2><span>2 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端电车</span></div>
+          <h3>Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-19zfmlq" data-subject-name="frontier power usa">
+      <div class="subject-heading"><h2>Frontier Power USA</h2><span>2 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端储能</span></div>
+          <h3>Frontier Power USA选择Stella四个项目，形成920MWh储能组合</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-5tpkvr" data-subject-name="99">
+      <div class="subject-heading"><h2>99</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-yuvwqa" data-subject-name="比亚迪半导体">
+      <div class="subject-heading"><h2>比亚迪半导体</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>电池与装机</span></div>
+          <h3>比亚迪半导体 BMS AFE 芯片累计出货超过 1 亿颗</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1yscx6a" data-subject-name="财政部">
+      <div class="subject-heading"><h2>财政部</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-03">2026-07-03</time><span>政策与贸易</span></div>
+          <h3>中国四部门取消部分新能源商用车车船税优惠，2027年起执行</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1hazgp3" data-subject-name="大众集团">
+      <div class="subject-heading"><h2>大众集团</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>大众集团二季度销量降8.6%，宣布车型数量最多削减一半</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-lesbmj" data-subject-name="广汽国际">
+      <div class="subject-heading"><h2>广汽国际</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-npb4kt" data-subject-name="广汽集团">
+      <div class="subject-heading"><h2>广汽集团</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>广汽与引望合作车型启境GT7启动全国交付，支持6C超充</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-13tlbxg" data-subject-name="广汽能源">
+      <div class="subject-heading"><h2>广汽能源</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-6xogt2" data-subject-name="国家标准化管理委员会">
+      <div class="subject-heading"><h2>国家标准化管理委员会</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-01">2026-07-01</time><span>政策与贸易</span></div>
+          <h3>中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1e8v0du" data-subject-name="国家发展改革委">
+      <div class="subject-heading"><h2>国家发展改革委</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>政策与贸易</span></div>
+          <h3>中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-130idy5" data-subject-name="国家能源局">
+      <div class="subject-heading"><h2>国家能源局</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>政策与贸易</span></div>
+          <h3>中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-zhklg6" data-subject-name="国家市场监督管理总局">
+      <div class="subject-heading"><h2>国家市场监督管理总局</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-01">2026-07-01</time><span>政策与贸易</span></div>
+          <h3>中国两项电动汽车强制国标施行，动力电池测试新增底部撞击与快充后短路</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1lk0yn6" data-subject-name="海洋网">
+      <div class="subject-heading"><h2>海洋网</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端电车</span></div>
+          <h3>比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-ty8aqb" data-subject-name="吉利集团">
+      <div class="subject-heading"><h2>吉利集团</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端电车</span></div>
+          <h3>吉利银河 TT 全球首发，采用 800V 架构和激光雷达辅助驾驶</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-horzz4" data-subject-name="吉利银河">
+      <div class="subject-heading"><h2>吉利银河</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端电车</span></div>
+          <h3>吉利银河 TT 全球首发，采用 800V 架构和激光雷达辅助驾驶</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1a0robe" data-subject-name="交通运输部">
+      <div class="subject-heading"><h2>交通运输部</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-03">2026-07-03</time><span>政策与贸易</span></div>
+          <h3>中国四部门取消部分新能源商用车车船税优惠，2027年起执行</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-k52y93" data-subject-name="晶科储能">
+      <div class="subject-heading"><h2>晶科储能</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-01">2026-07-01</time><span>终端储能</span></div>
+          <h3>晶科储能与Taliva Energy签署东欧400MWh项目组合合同</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-10kfnzf" data-subject-name="零跑汽车">
+      <div class="subject-heading"><h2>零跑汽车</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>终端电车</span></div>
+          <h3>零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-5vlopf" data-subject-name="美国国防后勤局">
+      <div class="subject-heading"><h2>美国国防后勤局</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>政策与贸易</span></div>
+          <h3>美国国防后勤局招标五年采购1.62万吨电池级碳酸锂</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1ylqdug" data-subject-name="奇瑞集团">
+      <div class="subject-heading"><h2>奇瑞集团</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-11l3frs" data-subject-name="启境汽车">
+      <div class="subject-heading"><h2>启境汽车</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>广汽与引望合作车型启境GT7启动全国交付，支持6C超充</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-oepl53" data-subject-name="容百科技">
+      <div class="subject-heading"><h2>容百科技</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>正极与前驱体</span></div>
+          <h3>容百科技披露磷酸锰铁锂满产满销，钠电正极进入规模化出货</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-18dbx7n" data-subject-name="税务总局">
+      <div class="subject-heading"><h2>税务总局</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-03">2026-07-03</time><span>政策与贸易</span></div>
+          <h3>中国四部门取消部分新能源商用车车船税优惠，2027年起执行</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-izzdt3" data-subject-name="天赐材料">
+      <div class="subject-heading"><h2>天赐材料</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>电池与装机</span></div>
+          <h3>天赐材料预计上半年净利27亿至30亿元，电解液出货同比增逾40%</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1ytvc1k" data-subject-name="蔚来">
+      <div class="subject-heading"><h2>蔚来</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>蔚来开始交付五座版ES8，最新一代累计交付12万辆</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1w8bi0i" data-subject-name="欣旺达">
+      <div class="subject-heading"><h2>欣旺达</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-29">2026-06-29</time><span>政策与贸易</span></div>
+          <h3>中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-2wa6b5" data-subject-name="引望">
+      <div class="subject-heading"><h2>引望</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>广汽与引望合作车型启境GT7启动全国交付，支持6C超充</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-55d3w3" data-subject-name="中创新航">
+      <div class="subject-heading"><h2>中创新航</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-29">2026-06-29</time><span>政策与贸易</span></div>
+          <h3>中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-jdafbm" data-subject-name="中关村储能产业技术联盟">
+      <div class="subject-heading"><h2>中关村储能产业技术联盟</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-06-29">2026-06-29</time><span>政策与贸易</span></div>
+          <h3>中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-bfp5x7" data-subject-name="a1 lithium">
+      <div class="subject-heading"><h2>A1 Lithium</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>上游镍钴锂</span></div>
+          <h3>Anson 为犹他 Green River 锂项目申请约 8,500 万美元美国能源部净资助</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-89mim1" data-subject-name="abn amro">
+      <div class="subject-heading"><h2>ABN AMRO</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1l230lx" data-subject-name="aiffp">
+      <div class="subject-heading"><h2>AIFFP</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端储能</span></div>
+          <h3>Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-6gnqzi" data-subject-name="alpiq">
+      <div class="subject-heading"><h2>Alpiq</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Alpiq 收购 Harmony Energy 90% 股权，纳入约 400MW 在建储能资产</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-qmuu6o" data-subject-name="alternergy">
+      <div class="subject-heading"><h2>Alternergy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端储能</span></div>
+          <h3>Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-nhwgel" data-subject-name="amazon">
+      <div class="subject-heading"><h2>Amazon</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>终端储能</span></div>
+          <h3>European Energy完成Winton North光储融资，Amazon追加电池购电协议</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-3dhi9b" data-subject-name="anson resources">
+      <div class="subject-heading"><h2>Anson Resources</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>上游镍钴锂</span></div>
+          <h3>Anson 为犹他 Green River 锂项目申请约 8,500 万美元美国能源部净资助</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-rf2yuz" data-subject-name="aqua metals">
+      <div class="subject-heading"><h2>Aqua Metals</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>上游镍钴锂</span></div>
+          <h3>Aqua Metals推进Headwaters ARC回收园区，首阶段规划锂盐与黑粉产线</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1kq0fyh" data-subject-name="autoliv">
+      <div class="subject-heading"><h2>Autoliv</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端电车</span></div>
+          <h3>Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1i77wfn" data-subject-name="black giant spa">
+      <div class="subject-heading"><h2>Black Giant SpA</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>上游镍钴锂</span></div>
+          <h3>Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-tfg897" data-subject-name="bnp paribas">
+      <div class="subject-heading"><h2>BNP Paribas</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1p3begu" data-subject-name="cerberus">
+      <div class="subject-heading"><h2>Cerberus</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-14gk9ib" data-subject-name="cleanpeak energy">
+      <div class="subject-heading"><h2>CleanPeak Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端储能</span></div>
+          <h3>CleanPeak 签署西悉尼机场 15 年供能协议，配建 30MW/120MWh 储能</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-hq3qv4" data-subject-name="critical metals corp">
+      <div class="subject-heading"><h2>Critical Metals Corp</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>上游镍钴锂</span></div>
+          <h3>Critical Metals与European Lithium修订收购协议，Wolfsberg交易文件拟于夏季发出</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1s35vnd" data-subject-name="energy vault">
+      <div class="subject-heading"><h2>Energy Vault</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端储能</span></div>
+          <h3>Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-qpl4pj" data-subject-name="energyx">
+      <div class="subject-heading"><h2>EnergyX</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>上游镍钴锂</span></div>
+          <h3>Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1ijjgft" data-subject-name="eni">
+      <div class="subject-heading"><h2>Eni</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>上游镍钴锂</span></div>
+          <h3>Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-mtx5yi" data-subject-name="envision">
+      <div class="subject-heading"><h2>Envision</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1qvaoqy" data-subject-name="eos">
+      <div class="subject-heading"><h2>Eos</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1i4amnq" data-subject-name="eos energy">
+      <div class="subject-heading"><h2>Eos Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端储能</span></div>
+          <h3>Frontier Power USA选择Stella四个项目，形成920MWh储能组合</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-ow7y80" data-subject-name="european energy">
+      <div class="subject-heading"><h2>European Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>终端储能</span></div>
+          <h3>European Energy完成Winton North光储融资，Amazon追加电池购电协议</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1yc2ujc" data-subject-name="european lithium">
+      <div class="subject-heading"><h2>European Lithium</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>上游镍钴锂</span></div>
+          <h3>Critical Metals与European Lithium修订收购协议，Wolfsberg交易文件拟于夏季发出</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1rwzjtu" data-subject-name="evolution mining">
+      <div class="subject-heading"><h2>Evolution Mining</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>上游镍钴锂</span></div>
+          <h3>Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-12nb85j" data-subject-name="exgen resources">
+      <div class="subject-heading"><h2>ExGen Resources</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>上游镍钴锂</span></div>
+          <h3>ExGen完成收购内华达三处锂资产权益，支付股份进入交割安排</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-4d0paf" data-subject-name="field">
+      <div class="subject-heading"><h2>Field</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-rp1ckx" data-subject-name="gm">
+      <div class="subject-heading"><h2>GM</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端储能</span></div>
+          <h3>Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-17zphzd" data-subject-name="green energy storage">
+      <div class="subject-heading"><h2>Green Energy Storage</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>终端储能</span></div>
+          <h3>Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1gopmaf" data-subject-name="greenchoice">
+      <div class="subject-heading"><h2>Greenchoice</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>终端储能</span></div>
+          <h3>Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-16f479a" data-subject-name="greenv">
+      <div class="subject-heading"><h2>GreenV</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-dvrqcf" data-subject-name="harmony energy">
+      <div class="subject-heading"><h2>Harmony Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Alpiq 收购 Harmony Energy 90% 股权，纳入约 400MW 在建储能资产</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1fxc6zd" data-subject-name="honda">
+      <div class="subject-heading"><h2>Honda</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>电池与装机</span></div>
+          <h3>LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1yyfuvy" data-subject-name="ico">
+      <div class="subject-heading"><h2>ICO</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1sb12cb" data-subject-name="ing">
+      <div class="subject-heading"><h2>ING</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1a55u1i" data-subject-name="jaecoo">
+      <div class="subject-heading"><h2>JAECOO</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-qlc696" data-subject-name="jetour">
+      <div class="subject-heading"><h2>JETOUR</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1pepzkz" data-subject-name="jupiter power">
+      <div class="subject-heading"><h2>Jupiter Power</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端储能</span></div>
+          <h3>Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-w8uiwz" data-subject-name="l-h battery">
+      <div class="subject-heading"><h2>L-H Battery</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>电池与装机</span></div>
+          <h3>LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-ftjer3" data-subject-name="lg energy solution">
+      <div class="subject-heading"><h2>LG Energy Solution</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>电池与装机</span></div>
+          <h3>LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-qizgg1" data-subject-name="lges vertech">
+      <div class="subject-heading"><h2>LGES Vertech</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>电池与装机</span></div>
+          <h3>LG 新能源与本田合资俄亥俄工厂投产，首批电芯转向储能系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-11hv4gg" data-subject-name="luxeed">
+      <div class="subject-heading"><h2>Luxeed</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端电车</span></div>
+          <h3>奇瑞上半年新能源车销量 47.52 万辆，新能源出口同比增长 164.9%</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-11fqi9z" data-subject-name="masdar">
+      <div class="subject-heading"><h2>Masdar</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>比亚迪与Masdar签署11.275GWh储能设备协议</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1l87jog" data-subject-name="mona">
+      <div class="subject-heading"><h2>MONA</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端电车</span></div>
+          <h3>小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-ovnj14" data-subject-name="mopar">
+      <div class="subject-heading"><h2>Mopar</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>终端电车</span></div>
+          <h3>零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-scky" data-subject-name="opdenergy">
+      <div class="subject-heading"><h2>Opdenergy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-n468ku" data-subject-name="peak energy">
+      <div class="subject-heading"><h2>Peak Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端储能</span></div>
+          <h3>Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-mi71xt" data-subject-name="ppuc">
+      <div class="subject-heading"><h2>PPUC</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端储能</span></div>
+          <h3>Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-64z54c" data-subject-name="precision periodic">
+      <div class="subject-heading"><h2>Precision Periodic</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>上游镍钴锂</span></div>
+          <h3>Precision Periodic拟在佛州建设模块化镍钴锰电池级精炼厂</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-gv6cxp" data-subject-name="rabobank">
+      <div class="subject-heading"><h2>Rabobank</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-lwf65n" data-subject-name="respec">
+      <div class="subject-heading"><h2>RESPEC</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>上游镍钴锂</span></div>
+          <h3>Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-t1j67t" data-subject-name="rwe">
+      <div class="subject-heading"><h2>RWE</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>终端储能</span></div>
+          <h3>Peak Energy 选址萨克拉门托建设 4GWh 钠离子储能工厂</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-3grdre" data-subject-name="smbc">
+      <div class="subject-heading"><h2>SMBC</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Opdenergy 完成 2.27 亿美元融资，覆盖智利 90MW/513MWh 运营储能资产</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-12gr0et" data-subject-name="solar pacific">
+      <div class="subject-heading"><h2>Solar Pacific</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-10">2026-07-10</time><span>终端储能</span></div>
+          <h3>Solar Pacific 为帕劳光储项目新增 19.8MWh 电池系统</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1epmj7s" data-subject-name="stella energy">
+      <div class="subject-heading"><h2>Stella Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Frontier Power 与 Stella 选定四个项目，计划部署 230MW/920MWh Eos 锌储能</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-9hp0sc" data-subject-name="stella energy solutions">
+      <div class="subject-heading"><h2>Stella Energy Solutions</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端储能</span></div>
+          <h3>Frontier Power USA选择Stella四个项目，形成920MWh储能组合</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-b9wknu" data-subject-name="stellantis">
+      <div class="subject-heading"><h2>Stellantis</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-06">2026-07-06</time><span>终端电车</span></div>
+          <h3>零跑 B10 在墨西哥完成认证并交付，借 Stellantis 网络进入北美</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-19ozhy6" data-subject-name="sungrow">
+      <div class="subject-heading"><h2>Sungrow</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-09">2026-07-09</time><span>终端储能</span></div>
+          <h3>Field 为英国两座储能项目完成融资，合计 239MW/1GWh</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-ui5nuw" data-subject-name="surge battery metals">
+      <div class="subject-heading"><h2>Surge Battery Metals</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>上游镍钴锂</span></div>
+          <h3>Surge 与 Evolution 完成 Nevada North 历史钻孔复测并纳入预可研模型</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1huv9v0" data-subject-name="taliva energy">
+      <div class="subject-heading"><h2>Taliva Energy</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-01">2026-07-01</time><span>终端储能</span></div>
+          <h3>晶科储能与Taliva Energy签署东欧400MWh项目组合合同</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-1ys5jus" data-subject-name="tesla">
+      <div class="subject-heading"><h2>Tesla</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-08">2026-07-08</time><span>电池与装机</span></div>
+          <h3>Tesla 开放柏林电芯产线给初创企业测试，18GWh 扩产项目同步推进</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-13l3e22" data-subject-name="vopak">
+      <div class="subject-heading"><h2>Vopak</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-02">2026-07-02</time><span>终端储能</span></div>
+          <h3>Vopak收购Green Energy Storage控股权并批准荷兰200MW/800MWh项目</h3>
+          <a href="daily-2026-07-11.html">打开 2026-07-11 报告</a>
+        </article>
+    </section>
+
+    <section class="subject-section" id="subject-y6vvyo" data-subject-name="western sydney international airport">
+      <div class="subject-heading"><h2>Western Sydney International Airport</h2><span>1 条</span></div>
+        <article class="news-row">
+          <div class="news-meta"><time datetime="2026-07-07">2026-07-07</time><span>终端储能</span></div>
+          <h3>CleanPeak 签署西悉尼机场 15 年供能协议，配建 30MW/120MWh 储能</h3>
+          <a href="daily-2026-07-10.html">打开 2026-07-10 报告</a>
+        </article>
+    </section>
+    <footer>随每期报告自动更新。</footer>
+  </main>
+  <script>
+    const input = document.querySelector('#subject-filter');
+    const chips = [...document.querySelectorAll('.subject-chip')];
+    const sections = [...document.querySelectorAll('.subject-section')];
+    const empty = document.querySelector('#empty-state');
+    input.addEventListener('input', () => {
+      const query = input.value.trim().toLowerCase();
+      let visible = 0;
+      for (const element of [...chips, ...sections]) {
+        const match = !query || element.dataset.subjectName.includes(query);
+        element.hidden = !match;
+        if (match && element.classList.contains('subject-chip')) visible += 1;
+      }
+      empty.style.display = visible ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>

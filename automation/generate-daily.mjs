@@ -2,11 +2,12 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
+import { buildSubjectIndex } from "./build-subject-index.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MODEL = process.env.OPENAI_MODEL || "gpt-5";
 const MIN_NEWS_ITEMS = Number(process.env.MIN_NEWS_ITEMS || 8);
-const MAX_NEWS_ITEMS = 30;
+const MAX_NEWS_ITEMS = 45;
 const TIME_ZONE = "Asia/Shanghai";
 
 const segmentDefinitions = [
@@ -22,16 +23,19 @@ const researchGroups = [
   {
     name: "政策与上游",
     segments: ["政策与贸易", "上游镍钴锂"],
-    focus: "各国电动车、储能、电池、关键矿产政策及贸易措施；镍、钴、锂矿山、冶炼、资源交易、产能和供应事件。优先政府原文、SMM、Reuters及公司公告。",
+    maxItems: 12,
+    focus: "各国电动车、储能、电池、关键矿产政策及贸易措施；镍、钴、锂矿山、冶炼、资源交易、产能和供应事件。优先政府原文、SMM、Reuters及公司公告。上游只保留影响明确的重大项目、交易、政策或供应变化，通常不超过4条。",
   },
   {
     name: "正极与电池",
     segments: ["正极与前驱体", "电池与装机"],
+    maxItems: 15,
     focus: "瑞翔、EcoPro及主要正极/前驱体厂商的订单、合作、投扩产和客户认证；电池厂供货、装机、工厂、技术量产和行业数据。优先SMM、中国汽车动力电池产业创新联盟、公司公告及Reuters。",
   },
   {
     name: "电车与储能",
     segments: ["终端电车", "终端储能"],
+    maxItems: 15,
     focus: "具体车企的新车型、产销、工厂、供应商、召回、出口和市场进入退出；具体储能项目的业主、集成商、电芯供应商、MW/MWh规模、地点、阶段和投运时间。优先Reuters、盖世汽车、中汽协、项目方及政府公告。",
   },
 ];
@@ -44,7 +48,7 @@ const responseSchema = {
     coverage_note: { type: "string" },
     events: {
       type: "array",
-      maxItems: 10,
+      maxItems: 15,
       items: {
         type: "object",
         additionalProperties: false,
@@ -113,6 +117,28 @@ function shanghaiTime(date = new Date()) {
   }).format(date);
 }
 
+async function publicationContext(reportDate) {
+  const reportsFile = JSON.parse(await readFile(path.join(ROOT, "reports.json"), "utf8"));
+  const previousReport = reportsFile.reports
+    .filter((report) => report.date < reportDate)
+    .sort((left, right) => right.date.localeCompare(left.date))[0];
+  const fallbackStart = new Date(`${reportDate}T11:00:00.000Z`);
+  fallbackStart.setUTCDate(fallbackStart.getUTCDate() - 7);
+  const windowStart = previousReport
+    ? `${previousReport.date} 19:00 (${TIME_ZONE})`
+    : `${shanghaiDate(fallbackStart)} 00:00 (${TIME_ZONE})`;
+  const excludedUrls = [];
+
+  for (const report of reportsFile.reports.slice(0, 12)) {
+    const html = await readFile(path.join(ROOT, report.file), "utf8");
+    for (const match of html.matchAll(/href="(https?:\/\/[^"#]+)"/g)) {
+      excludedUrls.push(match[1].replaceAll("&amp;", "&"));
+    }
+  }
+
+  return { windowStart, excludedUrls: [...new Set(excludedUrls)] };
+}
+
 function extractOutputText(response) {
   return (response.output || [])
     .filter((item) => item.type === "message")
@@ -122,14 +148,19 @@ function extractOutputText(response) {
     .join("");
 }
 
-function researchPrompt(group, reportDate, cutoff) {
-  return `你是锂电产业链日报的资深研究编辑。请使用 web search 对“${group.name}”进行实时检索，为 ${reportDate}（Asia/Shanghai，资料截止 ${cutoff}）整理可核实的公司或机构事件。
+function researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls) {
+  const excluded = excludedUrls.length
+    ? `\n以下链接已在历史报告中使用，不得作为新事件重复收录：\n${excludedUrls.slice(0, 120).join("\n")}`
+    : "";
+  return `你是锂电产业链新闻简报的资深研究编辑。请使用 web search 对“${group.name}”进行实时检索，为 ${reportDate}（Asia/Shanghai）整理可核实的公司或机构事件。
+
+本期新闻窗口：${windowStart} 至 ${cutoff}。只收录在该区间内首次发布或发生实质进展的事件；更早内容只能作为背景，不得独立成条。
 
 本轮只允许以下板块：${group.segments.join("、")}。
 重点：${group.focus}
 
 硬性要求：
-1. 先查最近24-72小时，必要时扩大到7天。没有重要新闻的板块返回0条，不得凑数；本轮最多10条。
+1. 严格覆盖上述增量窗口。没有重要新闻的板块返回0条，不得凑数；本轮最多${group.maxItems}条，重要事件多时可以充分收录。
 2. 新闻必须是具体主体做了具体事情。排除泛泛综述、股价波动、无新事实的评论、学术论文和搜索摘要。
 3. 每条必须打开并核实正文或原始公告，main_url必须是可直接访问的https/http原文URL，禁止填写搜索结果页或虚构URL。
 4. 优先SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府/监管机构、公司新闻稿、交易所公告。重大事件尽量用第二来源交叉核实。
@@ -138,10 +169,10 @@ function researchPrompt(group, reportDate, cutoff) {
 7. 只有正极与前驱体新闻可填写cathode_impact，而且必须说明对化学路线、原料需求、客户认证、产能或区域供应的具体影响；其他板块填空字符串。
 8. headline必须是“主体+动作+对象/关键数字”，不得使用“布局、发力、值得关注、影响深远”等空话。
 9. info_date使用YYYY-MM-DD；每条填写板块、国家/地区、公司和主题标签。coverage_note简要说明本轮检索到的重点来源和缺口。
-10. 同一事件即使多家媒体报道也只能保留一次。只输出符合JSON schema的结果。`;
+10. 同一事件即使多家媒体报道也只能保留一次。只输出符合JSON schema的结果。${excluded}`;
 }
 
-async function callOpenAI(group, reportDate, cutoff) {
+async function callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls) {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     throw new Error("OPENAI_API_KEY is missing. Add it in GitHub repository Settings > Secrets and variables > Actions.");
@@ -167,7 +198,7 @@ async function callOpenAI(group, reportDate, cutoff) {
           },
         },
       ],
-      input: researchPrompt(group, reportDate, cutoff),
+      input: researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls),
       text: {
         format: {
           type: "json_schema",
@@ -196,12 +227,12 @@ async function callOpenAI(group, reportDate, cutoff) {
   return parsed;
 }
 
-async function researchWithRetry(group, reportDate, cutoff) {
+async function researchWithRetry(group, reportDate, cutoff, windowStart, excludedUrls) {
   let finalError;
   for (let attempt = 1; attempt <= 2; attempt += 1) {
     try {
       console.log(`Researching ${group.name} (${attempt}/2) with ${MODEL}`);
-      return await callOpenAI(group, reportDate, cutoff);
+      return await callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls);
     } catch (error) {
       finalError = error;
       console.error(`${group.name} attempt ${attempt} failed: ${error.message}`);
@@ -225,8 +256,8 @@ function normalizedUrl(value) {
   }
 }
 
-function prepareEvents(results) {
-  const seenUrls = new Set();
+function prepareEvents(results, excludedUrls = []) {
+  const seenUrls = new Set(excludedUrls.map(normalizedUrl).filter(Boolean));
   const seenHeadlines = new Set();
   const validSegments = new Set(segmentDefinitions.map((segment) => segment.label));
   const events = [];
@@ -305,11 +336,12 @@ function renderCard(event, index) {
 }
 
 function siteNavigation(currentPage) {
-  return `    <nav class="site-nav" aria-label="日报导航">
-      <a class="brand" href="./">Lithium Industry Daily</a>
+  return `    <nav class="site-nav" aria-label="报告导航">
+      <a class="brand" href="./">Lithium Industry Briefing</a>
       <div class="nav-links">
-        <a${currentPage === "latest" ? ' class="current" aria-current="page"' : ""} href="./">最新日报</a>
-        <a${currentPage === "archive" ? ' class="current" aria-current="page"' : ""} href="archive.html">历史日报</a>
+        <a${currentPage === "latest" ? ' class="current" aria-current="page"' : ""} href="./">最新报告</a>
+        <a${currentPage === "archive" ? ' class="current" aria-current="page"' : ""} href="archive.html">历史报告</a>
+        <a href="subjects.html">主体归纳</a>
       </div>
     </nav>`;
 }
@@ -334,8 +366,8 @@ ${cards}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="${reportDate} 锂电产业链政策、镍钴锂、正极、电池、电车与储能新闻日报">
-  <title>锂电产业链新闻日报 | ${reportDate}</title>
+  <meta name="description" content="${reportDate} 锂电产业链政策、镍钴锂、正极、电池、电车与储能新闻简报">
+  <title>锂电产业链新闻简报 | ${reportDate}</title>
   <style>
     :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --coral:#ffad9f; --mint:#d9f3e4; --shadow:rgba(23,50,74,.09); }
     * { box-sizing:border-box; }
@@ -347,7 +379,7 @@ ${cards}
     .site-nav a { color:var(--blue-deep); font-weight:800; text-decoration:none; }
     .site-nav a:hover,.site-nav a:focus-visible,.site-nav .current { text-decoration:underline; }
     .site-nav .brand { color:var(--blue); }
-    .nav-links { display:flex; align-items:center; gap:18px; }
+    .nav-links { display:flex; flex-wrap:wrap; align-items:center; gap:18px; }
     .masthead { position:relative; padding:26px 28px; border:2px dashed var(--line); border-radius:8px; background:#f5fbff; box-shadow:0 12px 28px var(--shadow); }
     .masthead::before { content:""; display:block; width:94px; height:8px; margin-bottom:14px; border-radius:4px; background:repeating-linear-gradient(90deg,var(--coral) 0 10px,var(--yellow) 10px 20px,var(--blue) 20px 30px); }
     .kicker { margin:0 0 6px; color:var(--blue-deep); font-size:.9rem; font-weight:800; text-transform:uppercase; }
@@ -387,8 +419,8 @@ ${cards}
   <main class="page">
 ${siteNavigation(currentPage)}
     <header class="masthead">
-      <p class="kicker">Lithium Industry Daily</p>
-      <h1>锂电产业链新闻日报</h1>
+      <p class="kicker">Lithium Industry Briefing</p>
+      <h1>锂电产业链新闻简报</h1>
       <div class="meta"><span>${reportDate}</span><span>${TIME_ZONE}</span><span>资料截止 ${cutoff}</span><span>${events.length} 条新闻</span></div>
       <p class="source-note"><strong>来源覆盖：</strong>${escapeHtml(coverageNote)}</p>
     </header>
@@ -400,7 +432,7 @@ ${siteNavigation(currentPage)}
     </nav>
     <div class="report-head"><h2>新闻罗列</h2><span>按政策、上游、正极、电池、电车、储能排序；无重要新闻的板块不展示</span></div>
 ${sections}
-    <footer>自动更新时间：每天 19:00（Asia/Shanghai）。内容仅作行业信息整理，请以链接所示原始公告与报道为准。</footer>
+    <footer>自动更新时间：每周一、周三、周五 19:00（Asia/Shanghai）。内容仅作行业信息整理，请以链接所示原始公告与报道为准。</footer>
   </main>
 </body>
 </html>
@@ -416,7 +448,7 @@ async function updateArchive(reportDate, events) {
     .map((segment) => segment.label);
   const reportEntry = {
     date: reportDate,
-    title: "锂电产业链新闻日报",
+    title: "锂电产业链新闻简报",
     file: `daily-${reportDate}.html`,
     news_count: events.length,
     segments,
@@ -429,7 +461,7 @@ async function updateArchive(reportDate, events) {
           <h2>${escapeHtml(report.title)}</h2>
           <p>${report.news_count} 条新闻 · ${escapeHtml(report.segments.join("、"))}</p>
         </div>
-        <a class="open-link" href="${report.file}">查看日报 →</a>
+        <a class="open-link" href="${report.file}">查看报告 →</a>
       </article>`).join("\n");
   const archive = await readFile(archivePath, "utf8");
   const markerPattern = /      <!-- REPORT_LIST_START -->[\s\S]*?      <!-- REPORT_LIST_END -->/;
@@ -449,6 +481,7 @@ async function main() {
   const reportDate = requestedDate || shanghaiDate();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(reportDate)) throw new Error("Optional report date must be YYYY-MM-DD");
   const cutoff = `${reportDate} ${shanghaiTime()} (${TIME_ZONE})`;
+  const { windowStart, excludedUrls } = await publicationContext(reportDate);
   let results;
 
   if (process.env.LITHIUM_DAILY_FIXTURE) {
@@ -458,16 +491,16 @@ async function main() {
   } else {
     results = [];
     for (const group of researchGroups) {
-      results.push(await researchWithRetry(group, reportDate, cutoff));
+      results.push(await researchWithRetry(group, reportDate, cutoff, windowStart, excludedUrls));
     }
   }
 
-  const events = prepareEvents(results);
+  const events = prepareEvents(results, process.env.LITHIUM_DAILY_FIXTURE ? [] : excludedUrls);
   if (events.length < MIN_NEWS_ITEMS) {
     throw new Error(`Only ${events.length} verified events survived validation; minimum is ${MIN_NEWS_ITEMS}. Existing site was not changed.`);
   }
 
-  const coverageNote = `检索窗口以最近24-72小时为主，必要时扩大至7天；重点扫描SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府及公司原始公告。${results.map((result) => result.coverage_note).filter(Boolean).join(" ")}`;
+  const coverageNote = `本期增量窗口为${windowStart}至${cutoff}；重点扫描SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府及公司原始公告。${results.map((result) => result.coverage_note).filter(Boolean).join(" ")}`;
   const latestHtml = renderReport({ reportDate, cutoff, events, coverageNote, currentPage: "latest" });
   const datedHtml = renderReport({ reportDate, cutoff, events, coverageNote, currentPage: "archive" });
 
@@ -476,6 +509,7 @@ async function main() {
     writeFile(path.join(ROOT, `daily-${reportDate}.html`), datedHtml),
   ]);
   await updateArchive(reportDate, events);
+  await buildSubjectIndex();
 
   console.log(`Prepared ${reportDate}: ${events.length} verified events across ${new Set(events.map((event) => event.segment)).size} segments.`);
 }
