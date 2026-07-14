@@ -7,6 +7,16 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const COMPANY_ALIASES = new Map([
   ["比亚迪半导体", "比亚迪"],
   ["海洋网", "比亚迪"],
+  ["广汽", "广汽集团"],
+  ["广汽集团股份有限公司", "广汽集团"],
+  ["广汽国际", "广汽集团"],
+  ["GAC International", "广汽集团"],
+  ["广汽能源", "广汽集团"],
+  ["GAC Energy", "广汽集团"],
+  ["广汽埃安", "广汽集团"],
+  ["GAC Aion", "广汽集团"],
+  ["GAC", "广汽集团"],
+  ["GAC Group", "广汽集团"],
 ]);
 
 function decodeHtml(value = "") {

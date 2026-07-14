@@ -11,6 +11,30 @@ const MIN_NEWS_ITEMS = Number(process.env.MIN_NEWS_ITEMS || 1);
 const MAX_NEWS_ITEMS = 45;
 const TIME_ZONE = "Asia/Shanghai";
 
+const designatedWechatSources = [
+  "崔东树",
+  "电动车公社",
+  "电池中国",
+  "电池社",
+  "电车汇",
+  "低空经济网",
+  "汽车产业前线观察",
+  "起点锂电",
+  "氢锂荟",
+  "SEVEN调研纪要",
+  "数说新能源",
+  "SMM锂电",
+  "鑫椤锂电",
+  "新能源情报局",
+  "则言咨询",
+  "芝能汽车",
+  "中国汽车报",
+  "中国汽车动力电池产业创新联盟",
+  "中国汽车工业协会",
+  "中汽数研",
+  "中汽协会数据",
+];
+
 const segmentDefinitions = [
   { label: "政策与贸易", id: "policy-trade" },
   { label: "上游镍钴锂", id: "upstream" },
@@ -165,17 +189,22 @@ function researchPrompt(group, reportDate, cutoff, windowStart, excludedUrls, hi
 本轮只允许以下板块：${group.segments.join("、")}。
 重点：${group.focus}
 
+指定微信公众号线索池：${designatedWechatSources.join("、")}。这些账号用于发现候选事件，不因账号在窗口内发文就自动认定事件是新的。
+
 硬性要求：
 1. 严格覆盖上述增量窗口。没有重要新闻的板块返回0条，不得凑数；本轮最多${group.maxItems}条，重要事件多时可以充分收录。
-2. 新闻必须是具体主体做了具体事情。排除泛泛综述、股价波动、无新事实的评论、学术论文和搜索摘要。
-3. 每条必须打开并核实正文或原始公告，main_url必须是可直接访问的https/http原文URL，禁止填写搜索结果页或虚构URL。
-4. 优先SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府/监管机构、公司新闻稿、交易所公告。重大事件尽量用第二来源交叉核实。
-5. 合作、供货、投资、合资和项目里程碑必须查询双方此前关系；有可靠历史时写入background并附background_sources，说明这次相较此前有什么变化。无可靠历史时background填空字符串。
-6. event_details用中文讲清谁、何时、在哪里、与谁、做了什么、项目阶段及已披露的金额/产能/数量/期限/产品/投产交付时间；未披露就明确写“未披露”。
-7. 只有正极与前驱体新闻可填写cathode_impact，而且必须说明对化学路线、原料需求、客户认证、产能或区域供应的具体影响；其他板块填空字符串。
-8. headline必须是“主体+动作+对象/关键数字”，不得使用“布局、发力、值得关注、影响深远”等空话。
-9. info_date使用YYYY-MM-DD；每条填写板块、国家/地区、公司和主题标签。coverage_note简要说明本轮检索到的重点来源和缺口。
-10. 同一事件即使多家媒体报道、标题不同或URL不同也只能保留一次。若历史事件出现实质新进展，必须在event_details中明确写出新增动作及新增日期，否则排除。只输出符合JSON schema的结果。${excluded}${priorHeadlines}`;
+2. 对指定公众号逐项执行“账号名+窗口日期+本板块公司/动作关键词”检索，优先打开mp.weixin.qq.com原文。将公众号作为线索源；除非文章本身是机构首发数据、公司原文或独家采访，否则还要找到公司公告、监管文件、政府原文或可靠原创报道复核。
+3. 区分文章发布日期和事件日期。公众号在窗口内复盘、转载或重发的旧事件不得收录；只有窗口内出现新的签约、投产、获批、交付、数据披露或其他实质动作才算新增。
+4. 新闻必须是具体主体做了具体事情。排除泛泛综述、股价波动、无新事实的评论、调研传闻、学术论文和搜索摘要。
+5. 每条必须打开并核实正文或原始公告，main_url必须是可直接访问的https/http原文URL，禁止填写搜索结果页或虚构URL。
+6. 优先SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府/监管机构、公司新闻稿、交易所公告。重大事件尽量用第二来源交叉核实。
+7. 合作、供货、投资、合资和项目里程碑必须查询双方此前关系；有可靠历史时写入background并附background_sources，说明这次相较此前有什么变化。无可靠历史时background填空字符串。
+8. event_details用中文讲清谁、何时、在哪里、与谁、做了什么、项目阶段及已披露的金额/产能/数量/期限/产品/投产交付时间；未披露就明确写“未披露”。
+9. 只有正极与前驱体新闻可填写cathode_impact，而且必须说明对化学路线、原料需求、客户认证、产能或区域供应的具体影响；其他板块填空字符串。
+10. headline必须是“主体+动作+对象/关键数字”，不得使用“布局、发力、值得关注、影响深远”等空话。
+11. info_date使用YYYY-MM-DD；每条填写板块、国家/地区、公司和主题标签。公司标签使用集团规范名，子公司或品牌可在正文说明；例如广汽、广汽国际、广汽能源、广汽埃安统一标记为“广汽集团”。
+12. coverage_note说明本轮检索到的重点来源、哪些指定公众号提供了有效候选以及无法访问的来源，不得笼统声称“已扫描”却没有逐项检索。
+13. 同一事件即使多家媒体报道、标题不同或URL不同也只能保留一次。若历史事件出现实质新进展，必须在event_details中明确写出新增动作及新增日期，否则排除。只输出符合JSON schema的结果。${excluded}${priorHeadlines}`;
 }
 
 async function callOpenAI(group, reportDate, cutoff, windowStart, excludedUrls, historicalEvents) {
@@ -510,7 +539,7 @@ async function main() {
     throw new Error(`Only ${events.length} verified events survived validation; minimum is ${MIN_NEWS_ITEMS}. Existing site was not changed.`);
   }
 
-  const coverageNote = `本期增量窗口为${windowStart}至${cutoff}；重点扫描SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、政府及公司原始公告。${results.map((result) => result.coverage_note).filter(Boolean).join(" ")}`;
+  const coverageNote = `本期增量窗口为${windowStart}至${cutoff}；重点扫描SMM、Reuters、盖世汽车、中国汽车动力电池产业创新联盟、中汽协、指定行业公众号线索池、政府及公司原始公告。${results.map((result) => result.coverage_note).filter(Boolean).join(" ")}`;
   const latestHtml = renderReport({ reportDate, cutoff, events, coverageNote, currentPage: "latest" });
   const datedHtml = renderReport({ reportDate, cutoff, events, coverageNote, currentPage: "archive" });
 
