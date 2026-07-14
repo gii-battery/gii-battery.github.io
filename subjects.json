@@ -1,6 +1,58 @@
 {
-  "updated_at": "2026-07-14T08:15:58.896Z",
+  "updated_at": "2026-07-14T14:00:07.252Z",
   "subjects": [
+    {
+      "id": "subject-19z0bqb",
+      "name": "比亚迪",
+      "count": 5,
+      "items": [
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-13",
+          "report_date": "2026-07-13",
+          "report_file": "daily-2026-07-13.html",
+          "report_anchor": "news-6",
+          "headline": "科思创与比亚迪签署长期合作备忘录，联合开发动力电池与储能材料",
+          "segment": "电池与装机"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-13",
+          "report_date": "2026-07-13",
+          "report_file": "daily-2026-07-13.html",
+          "report_anchor": "news-11",
+          "headline": "比亚迪腾势Z开启中国预售，76kWh刀片电池版本68万元起",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-19",
+          "headline": "比亚迪与Masdar签署11.275GWh储能设备协议",
+          "segment": "终端储能"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-09",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-15",
+          "headline": "比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-07",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-14",
+          "headline": "比亚迪半导体 BMS AFE 芯片累计出货超过 1 亿颗",
+          "segment": "电池与装机"
+        }
+      ]
+    },
     {
       "id": "subject-1pza3xe",
       "name": "宁德时代",
@@ -11,7 +63,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-5",
+          "report_anchor": "news-8",
           "headline": "中国一汽悦意08上市并启动交付，三套电池覆盖增程与纯电版本",
           "segment": "终端电车"
         },
@@ -41,40 +93,6 @@
           "report_anchor": "news-5",
           "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
           "segment": "政策与贸易"
-        }
-      ]
-    },
-    {
-      "id": "subject-19z0bqb",
-      "name": "比亚迪",
-      "count": 3,
-      "items": [
-        {
-          "subject": "比亚迪",
-          "date": "2026-07-09",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-19",
-          "headline": "比亚迪与Masdar签署11.275GWh储能设备协议",
-          "segment": "终端储能"
-        },
-        {
-          "subject": "比亚迪",
-          "date": "2026-07-09",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-15",
-          "headline": "比亚迪第 1,700 万辆新能源车下线，海豹 08 同步搭载二代刀片电池",
-          "segment": "终端电车"
-        },
-        {
-          "subject": "比亚迪",
-          "date": "2026-07-07",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-14",
-          "headline": "比亚迪半导体 BMS AFE 芯片累计出货超过 1 亿颗",
-          "segment": "电池与装机"
         }
       ]
     },
@@ -172,7 +190,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-7",
+          "report_anchor": "news-10",
           "headline": "Stellantis二季度发运159.7万辆，零跑海外发运增至3.3万辆",
           "segment": "终端电车"
         },
@@ -222,7 +240,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-8",
+          "report_anchor": "news-12",
           "headline": "Eni与Seri Industrial成立FAENIX，承接意大利16GWh储能电池商业化",
           "segment": "终端储能"
         },
@@ -247,7 +265,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-7",
+          "report_anchor": "news-10",
           "headline": "Stellantis二季度发运159.7万辆，零跑海外发运增至3.3万辆",
           "segment": "终端电车"
         },
@@ -272,7 +290,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-3",
+          "report_anchor": "news-4",
           "headline": "杉杉股份上半年净利润预增262%至334%，巴斯夫杉杉正极业务转为盈利",
           "segment": "正极与前驱体"
         }
@@ -307,6 +325,22 @@
           "report_anchor": "news-15",
           "headline": "大众集团二季度销量降8.6%，宣布车型数量最多削减一半",
           "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-14m2d13",
+      "name": "国城矿业",
+      "count": 1,
+      "items": [
+        {
+          "subject": "国城矿业",
+          "date": "2026-07-12",
+          "report_date": "2026-07-13",
+          "report_file": "daily-2026-07-13.html",
+          "report_anchor": "news-2",
+          "headline": "国城锂业一期6万吨电池级碳酸锂产线正式投产",
+          "segment": "上游镍钴锂"
         }
       ]
     },
@@ -352,23 +386,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-2",
-          "headline": "海南矿业上半年运抵7万吨锂精矿，星之海锂盐项目实现月度达产",
-          "segment": "上游镍钴锂"
-        }
-      ]
-    },
-    {
-      "id": "subject-1c4bzry",
-      "name": "海南星之海",
-      "count": 1,
-      "items": [
-        {
-          "subject": "海南星之海",
-          "date": "2026-07-13",
-          "report_date": "2026-07-13",
-          "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-2",
+          "report_anchor": "news-3",
           "headline": "海南矿业上半年运抵7万吨锂精矿，星之海锂盐项目实现月度达产",
           "segment": "上游镍钴锂"
         }
@@ -439,18 +457,18 @@
       ]
     },
     {
-      "id": "subject-1ekwvby",
-      "name": "零跑国际",
+      "id": "subject-1b6n1iw",
+      "name": "科思创",
       "count": 1,
       "items": [
         {
-          "subject": "零跑国际",
+          "subject": "科思创",
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-7",
-          "headline": "Stellantis二季度发运159.7万辆，零跑海外发运增至3.3万辆",
-          "segment": "终端电车"
+          "report_anchor": "news-6",
+          "headline": "科思创与比亚迪签署长期合作备忘录，联合开发动力电池与储能材料",
+          "segment": "电池与装机"
         }
       ]
     },
@@ -528,7 +546,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-5",
+          "report_anchor": "news-8",
           "headline": "中国一汽悦意08上市并启动交付，三套电池覆盖增程与纯电版本",
           "segment": "终端电车"
         }
@@ -544,7 +562,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-6",
+          "report_anchor": "news-9",
           "headline": "赛力斯上半年预亏15亿至18亿元，问界汽车预亏10.5亿至13亿元",
           "segment": "终端电车"
         }
@@ -560,7 +578,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-3",
+          "report_anchor": "news-4",
           "headline": "杉杉股份上半年净利润预增262%至334%，巴斯夫杉杉正极业务转为盈利",
           "segment": "正极与前驱体"
         }
@@ -656,7 +674,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-5",
+          "report_anchor": "news-8",
           "headline": "中国一汽悦意08上市并启动交付，三套电池覆盖增程与纯电版本",
           "segment": "终端电车"
         }
@@ -720,7 +738,7 @@
           "date": "2026-07-12",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-5",
+          "report_anchor": "news-8",
           "headline": "中国一汽悦意08上市并启动交付，三套电池覆盖增程与纯电版本",
           "segment": "终端电车"
         }
@@ -1088,7 +1106,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-8",
+          "report_anchor": "news-12",
           "headline": "Eni与Seri Industrial成立FAENIX，承接意大利16GWh储能电池商业化",
           "segment": "终端储能"
         }
@@ -1392,7 +1410,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-4",
+          "report_anchor": "news-7",
           "headline": "Mercedes-Benz投用匈牙利第二工厂，电动C级开始量产",
           "segment": "终端电车"
         }
@@ -1431,6 +1449,22 @@
       ]
     },
     {
+      "id": "subject-hjnacw",
+      "name": "NanoMalaysia",
+      "count": 1,
+      "items": [
+        {
+          "subject": "NanoMalaysia",
+          "date": "2026-07-13",
+          "report_date": "2026-07-13",
+          "report_file": "daily-2026-07-13.html",
+          "report_anchor": "news-5",
+          "headline": "马来西亚Gigafactory Malaysia计划7月启动本土NMC电池小规模商业化",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
       "id": "subject-tlrzdz",
       "name": "NextEnergy Group",
       "count": 1,
@@ -1440,7 +1474,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-9",
+          "report_anchor": "news-13",
           "headline": "NextEnergy旗下Starlight获英国240MW/960MWh储能项目规划许可",
           "segment": "终端储能"
         }
@@ -1600,7 +1634,7 @@
           "date": "2026-07-13",
           "report_date": "2026-07-13",
           "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-8",
+          "report_anchor": "news-12",
           "headline": "Eni与Seri Industrial成立FAENIX，承接意大利16GWh储能电池商业化",
           "segment": "终端储能"
         }
