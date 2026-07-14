@@ -8,7 +8,23 @@ test("groups BYD subsidiaries and brands under BYD", () => {
 });
 
 test("does not duplicate a parent when parent and subsidiary share one card", () => {
-  assert.deepEqual(canonicalCompanies(["比亚迪", "比亚迪半导体", "海洋网"]), ["比亚迪"]);
+  assert.deepEqual(
+    canonicalCompanies(["比亚迪", "比亚迪半导体", "海洋网", "腾势汽车"]),
+    ["比亚迪"],
+  );
+});
+
+test("groups operating subsidiaries under the listed or institutional parent", () => {
+  assert.deepEqual(
+    canonicalCompanies(["国城矿业", "四川国城锂业", "马尔康金鑫矿业"]),
+    ["国城矿业"],
+  );
+  assert.deepEqual(canonicalCompanies(["海南矿业", "海南星之海"]), ["海南矿业"]);
+  assert.deepEqual(
+    canonicalCompanies(["NanoMalaysia", "Gigafactory Malaysia"]),
+    ["NanoMalaysia"],
+  );
+  assert.deepEqual(canonicalCompanies(["零跑汽车", "零跑国际"]), ["零跑汽车"]);
 });
 
 test("groups GAC operating entities under GAC Group", () => {
