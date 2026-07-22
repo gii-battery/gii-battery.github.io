@@ -31,13 +31,17 @@ test("groups GAC operating entities under GAC Group", () => {
   assert.equal(canonicalCompany("广汽国际"), "广汽集团");
   assert.equal(canonicalCompany("广汽能源"), "广汽集团");
   assert.equal(canonicalCompany("广汽埃安"), "广汽集团");
+  assert.equal(canonicalCompany("昊铂"), "广汽集团");
+  assert.equal(canonicalCompany("广汽传祺"), "广汽集团");
+  assert.equal(canonicalCompany("广汽本田"), "广汽集团");
+  assert.equal(canonicalCompany("广汽丰田"), "广汽集团");
   assert.equal(canonicalCompany("GAC Energy"), "广汽集团");
   assert.equal(canonicalCompany("GAC"), "广汽集团");
 });
 
 test("does not duplicate GAC Group when aliases share one card", () => {
   assert.deepEqual(
-    canonicalCompanies(["广汽集团", "广汽国际", "广汽能源", "GAC Aion"]),
+    canonicalCompanies(["广汽集团", "广汽国际", "广汽能源", "GAC Aion", "昊铂", "广汽本田", "广汽丰田"]),
     ["广汽集团"],
   );
 });

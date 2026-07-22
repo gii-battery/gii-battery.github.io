@@ -42,7 +42,6 @@ const segmentDefinitions = [
   { label: "正极与前驱体", id: "cathode" },
   { label: "电池与装机", id: "battery" },
   { label: "终端电车", id: "ev" },
-  { label: "终端储能", id: "storage" },
 ];
 
 const researchGroups = [
@@ -50,7 +49,7 @@ const researchGroups = [
     name: "政策与上游",
     segments: ["政策与贸易", "上游镍钴锂"],
     maxItems: 12,
-    focus: "各国电动车、储能、电池、关键矿产政策及贸易措施；镍、钴、锂矿山、冶炼、资源交易、产能和供应事件。优先政府原文、SMM、Reuters及公司公告。上游只保留影响明确的重大项目、交易、政策或供应变化，通常不超过4条。",
+    focus: "各国电动车、电池、关键矿产政策及贸易措施；镍、钴、锂矿山、冶炼、资源交易、产能和供应事件。优先政府原文、SMM、Reuters及公司公告。政策需充分覆盖不同国家与地区；上游只保留影响明确的重大项目、交易、政策或供应变化，通常不超过3条。",
   },
   {
     name: "正极与电池",
@@ -59,10 +58,10 @@ const researchGroups = [
     focus: "瑞翔、EcoPro及主要正极/前驱体厂商的订单、合作、投扩产和客户认证；电池厂供货、装机、工厂、技术量产和行业数据。优先SMM、中国汽车动力电池产业创新联盟、公司公告及Reuters。",
   },
   {
-    name: "电车与储能",
-    segments: ["终端电车", "终端储能"],
-    maxItems: 15,
-    focus: "具体车企的新车型、产销、工厂、供应商、召回、出口和市场进入退出；具体储能项目的业主、集成商、电芯供应商、MW/MWh规模、地点、阶段和投运时间。优先Reuters、盖世汽车、中汽协、项目方及政府公告。",
+    name: "终端电车",
+    segments: ["终端电车"],
+    maxItems: 18,
+    focus: "广泛检索具体车企的新车型、交付、产销、工厂、供应商、召回、出口、充换电合作和市场进入退出。优先Reuters、盖世汽车、中汽协、车企及政府公告；终端电车是本简报的重点板块，不得用泛行业评论替代具体公司动作。完全排除储能项目新闻。",
   },
 ];
 
@@ -74,7 +73,7 @@ const responseSchema = {
     coverage_note: { type: "string" },
     events: {
       type: "array",
-      maxItems: 15,
+      maxItems: 18,
       items: {
         type: "object",
         additionalProperties: false,
@@ -423,7 +422,7 @@ ${cards}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="${reportDate} 锂电产业链政策、镍钴锂、正极、电池、电车与储能新闻简报">
+  <meta name="description" content="${reportDate} 锂电产业链政策、镍钴锂、正极、电池与电车新闻简报">
   <title>锂电产业链新闻简报 | ${reportDate}</title>
   <style>
     :root { --ink:#17324a; --muted:#5b7185; --blue:#1769aa; --blue-deep:#0d4f86; --blue-pale:#eaf6ff; --paper:#fbfdff; --line:#87bce5; --yellow:#ffe998; --coral:#ffad9f; --mint:#d9f3e4; --shadow:rgba(23,50,74,.09); }
@@ -489,7 +488,7 @@ ${siteNavigation(currentPage)}
         ${jumpLinks}
       </div>
     </nav>
-    <div class="report-head"><h2>新闻罗列</h2><span>按政策、上游、正极、电池、电车、储能排序；无重要新闻的板块不展示</span></div>
+    <div class="report-head"><h2>新闻罗列</h2><span>按政策、上游、正极、电池、电车排序；无重要新闻的板块不展示</span></div>
 ${sections}
     <footer>自动更新时间：每周一、周三、周五 16:30（Asia/Shanghai）。内容仅作行业信息整理，请以链接所示原始公告与报道为准。</footer>
   </main>
@@ -540,7 +539,9 @@ async function main() {
   const reportDate = requestedDate || shanghaiDate();
   if (!/^\d{4}-\d{2}-\d{2}$/.test(reportDate)) throw new Error("Optional report date must be YYYY-MM-DD");
   const cutoff = `${reportDate} ${shanghaiTime()} (${TIME_ZONE})`;
-  const { windowStart, excludedUrls, historicalEvents } = await publicationContext(reportDate);
+  const publication = await publicationContext(reportDate);
+  const windowStart = process.env.LITHIUM_DAILY_WINDOW_START || publication.windowStart;
+  const { excludedUrls, historicalEvents } = publication;
   let results;
 
   if (process.env.LITHIUM_DAILY_FIXTURE) {
