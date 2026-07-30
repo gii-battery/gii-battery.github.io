@@ -1,11 +1,20 @@
 {
-  "updated_at": "2026-07-28T01:00:51.754Z",
+  "updated_at": "2026-07-30T01:03:17.493Z",
   "subjects": [
     {
       "id": "subject-1pza3xe",
       "name": "宁德时代",
-      "count": 10,
+      "count": 11,
       "items": [
+        {
+          "subject": "宁德时代",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-15",
+          "headline": "小米汽车将发布昆仑架构，N90 Max和N70 Max两款SUV同步亮相",
+          "segment": "终端电车"
+        },
         {
           "subject": "宁德时代",
           "date": "2026-07-27",
@@ -101,8 +110,17 @@
     {
       "id": "subject-19z0bqb",
       "name": "比亚迪",
-      "count": 7,
+      "count": 8,
       "items": [
+        {
+          "subject": "比亚迪",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-14",
+          "headline": "比亚迪在日本上市RACCO微型纯电车，214.5万日元起并提供两档续航",
+          "segment": "终端电车"
+        },
         {
           "subject": "比亚迪",
           "date": "2026-07-27",
@@ -169,6 +187,58 @@
       ]
     },
     {
+      "id": "subject-4m57m8",
+      "name": "工业和信息化部",
+      "count": 5,
+      "items": [
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-2",
+          "headline": "商务部披露以旧换新带动超1.25万亿元销售，6月新能源补贴车占65.4%",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-3",
+          "headline": "工信部将加快发布车企供应商货款支付规范指引，20家媒体任账期监督员",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-07-20",
+          "report_date": "2026-07-22",
+          "report_file": "daily-2026-07-22.html",
+          "report_anchor": "news-3",
+          "headline": "工信部公布反内卷执行进展，产能预警、置换与企业约谈继续用于规范竞争",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-07-03",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-3",
+          "headline": "中国四部门取消部分新能源商用车车船税优惠，2027年起执行",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "工业和信息化部",
+          "date": "2026-06-30",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-12",
+          "headline": "工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
       "id": "subject-npb4kt",
       "name": "广汽集团",
       "count": 5,
@@ -216,6 +286,58 @@
           "report_file": "daily-2026-07-10.html",
           "report_anchor": "news-21",
           "headline": "广汽联合 GreenV 与 99，计划 2030 年前在巴西部署 242 座快充站",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-11h8650",
+      "name": "小鹏汽车",
+      "count": 5,
+      "items": [
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-16",
+          "headline": "小鹏将在澳大利亚六个月内导入五款新车，2027年推进智能驾驶功能",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-24",
+          "report_date": "2026-07-28",
+          "report_file": "daily-2026-07-28.html",
+          "report_anchor": "news-17",
+          "headline": "小鹏MONA M03 Ultra SE交付提前至7月底，1500TOPS车型进入15万元级",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-16",
+          "report_date": "2026-07-17",
+          "report_file": "daily-2026-07-17.html",
+          "report_anchor": "news-4",
+          "headline": "小鹏MONA L03正式上市，12.38万元起并计划年内进入全球65个国家",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-10",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-18",
+          "headline": "小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "小鹏汽车",
+          "date": "2026-07-09",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-17",
+          "headline": "Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持",
           "segment": "终端电车"
         }
       ]
@@ -273,79 +395,97 @@
       ]
     },
     {
-      "id": "subject-11h8650",
-      "name": "小鹏汽车",
-      "count": 4,
+      "id": "subject-qnqrww",
+      "name": "SMM",
+      "count": 5,
       "items": [
         {
-          "subject": "小鹏汽车",
+          "subject": "SMM",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-6",
+          "headline": "SMM认为6月中国磷酸铁锂出口量价齐升，环比增幅超过100%",
+          "segment": "正极与前驱体"
+        },
+        {
+          "subject": "SMM",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-8",
+          "headline": "SMM认为韩国6月新能源车回升主要由HEV驱动，电池需求不能按销量同比例外推",
+          "segment": "电池与装机"
+        },
+        {
+          "subject": "SMM",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-7",
+          "headline": "SMM认为电池材料价格表现分化，终端采购仍偏谨慎",
+          "segment": "正极与前驱体"
+        },
+        {
+          "subject": "SMM",
           "date": "2026-07-24",
           "report_date": "2026-07-28",
           "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-17",
-          "headline": "小鹏MONA M03 Ultra SE交付提前至7月底，1500TOPS车型进入15万元级",
-          "segment": "终端电车"
+          "report_anchor": "news-6",
+          "headline": "SMM判断阿根廷暴雪主要冲击卡塔马卡锂盐物流而非系统性停产",
+          "segment": "上游镍钴锂"
         },
         {
-          "subject": "小鹏汽车",
-          "date": "2026-07-16",
-          "report_date": "2026-07-17",
-          "report_file": "daily-2026-07-17.html",
-          "report_anchor": "news-4",
-          "headline": "小鹏MONA L03正式上市，12.38万元起并计划年内进入全球65个国家",
-          "segment": "终端电车"
-        },
-        {
-          "subject": "小鹏汽车",
-          "date": "2026-07-10",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-18",
-          "headline": "小鹏 MONA L03 今日启动全国试驾，预售价 14.38 万—16.58 万元",
-          "segment": "终端电车"
-        },
-        {
-          "subject": "小鹏汽车",
-          "date": "2026-07-09",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-17",
-          "headline": "Autoliv与小鹏签署战略框架协议，合作扩展至联合开发和全球业务支持",
-          "segment": "终端电车"
+          "subject": "SMM",
+          "date": "2026-07-23",
+          "report_date": "2026-07-28",
+          "report_file": "daily-2026-07-28.html",
+          "report_anchor": "news-9",
+          "headline": "SMM认为磷酸铁锂7月出货修复但加工费谈判仍压制非一体化利润",
+          "segment": "正极与前驱体"
         }
       ]
     },
     {
-      "id": "subject-4m57m8",
-      "name": "工业和信息化部",
-      "count": 3,
+      "id": "subject-55d3w3",
+      "name": "中创新航",
+      "count": 4,
       "items": [
         {
-          "subject": "工业和信息化部",
-          "date": "2026-07-20",
+          "subject": "中创新航",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-15",
+          "headline": "小米汽车将发布昆仑架构，N90 Max和N70 Max两款SUV同步亮相",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "中创新航",
+          "date": "2026-07-18",
           "report_date": "2026-07-22",
           "report_file": "daily-2026-07-22.html",
-          "report_anchor": "news-3",
-          "headline": "工信部公布反内卷执行进展，产能预警、置换与企业约谈继续用于规范竞争",
-          "segment": "政策与贸易"
-        },
-        {
-          "subject": "工业和信息化部",
-          "date": "2026-07-03",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-3",
-          "headline": "中国四部门取消部分新能源商用车车船税优惠，2027年起执行",
-          "segment": "政策与贸易"
-        },
-        {
-          "subject": "工业和信息化部",
-          "date": "2026-06-30",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-12",
-          "headline": "工信部在电池联盟论坛明确关注富锂正极、硅负极和固态电解质",
+          "report_anchor": "news-9",
+          "headline": "中创新航与广汽埃安升级AION S维保，177Ah磷酸铁锂电池质保延至30万公里",
           "segment": "电池与装机"
+        },
+        {
+          "subject": "中创新航",
+          "date": "2026-07-16",
+          "report_date": "2026-07-17",
+          "report_file": "daily-2026-07-17.html",
+          "report_anchor": "news-1",
+          "headline": "创新联盟发布6月动力电池数据：装车76.5GWh，磷酸铁锂占83.3%",
+          "segment": "电池与装机"
+        },
+        {
+          "subject": "中创新航",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-5",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
         }
       ]
     },
@@ -379,6 +519,40 @@
           "report_file": "daily-2026-07-22.html",
           "report_anchor": "news-13",
           "headline": "华为超充接入上汽大众充电地图，首批新增超1万支超充枪",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-eo9894",
+      "name": "吉利汽车",
+      "count": 3,
+      "items": [
+        {
+          "subject": "吉利汽车",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-1",
+          "headline": "国内新认证乘用车不得搭载外部智驾小蓝灯，吉利称将跟随国标执行",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "吉利汽车",
+          "date": "2026-07-23",
+          "report_date": "2026-07-28",
+          "report_file": "daily-2026-07-28.html",
+          "report_anchor": "news-19",
+          "headline": "Ford与吉利在西班牙设立合资公司，2028年起生产两款吉利电动SUV",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "吉利汽车",
+          "date": "2026-07-14",
+          "report_date": "2026-07-15",
+          "report_file": "daily-2026-07-15.html",
+          "report_anchor": "news-6",
+          "headline": "吉利EX2在澳大利亚公布售价，35.3kWh版本起价26490澳元",
           "segment": "终端电车"
         }
       ]
@@ -418,6 +592,40 @@
       ]
     },
     {
+      "id": "subject-1w8bi0i",
+      "name": "欣旺达",
+      "count": 3,
+      "items": [
+        {
+          "subject": "欣旺达",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-15",
+          "headline": "小米汽车将发布昆仑架构，N90 Max和N70 Max两款SUV同步亮相",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "欣旺达",
+          "date": "2026-07-24",
+          "report_date": "2026-07-28",
+          "report_file": "daily-2026-07-28.html",
+          "report_anchor": "news-5",
+          "headline": "天齐锂业拟1.5亿元认购欣旺达动力0.55%新增股份",
+          "segment": "上游镍钴锂"
+        },
+        {
+          "subject": "欣旺达",
+          "date": "2026-06-29",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-5",
+          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
       "id": "subject-jwy3dv",
       "name": "亿纬锂能",
       "count": 3,
@@ -448,40 +656,6 @@
           "report_anchor": "news-8",
           "headline": "中国一汽悦意08上市并启动交付，三套电池覆盖增程与纯电版本",
           "segment": "终端电车"
-        }
-      ]
-    },
-    {
-      "id": "subject-55d3w3",
-      "name": "中创新航",
-      "count": 3,
-      "items": [
-        {
-          "subject": "中创新航",
-          "date": "2026-07-18",
-          "report_date": "2026-07-22",
-          "report_file": "daily-2026-07-22.html",
-          "report_anchor": "news-9",
-          "headline": "中创新航与广汽埃安升级AION S维保，177Ah磷酸铁锂电池质保延至30万公里",
-          "segment": "电池与装机"
-        },
-        {
-          "subject": "中创新航",
-          "date": "2026-07-16",
-          "report_date": "2026-07-17",
-          "report_file": "daily-2026-07-17.html",
-          "report_anchor": "news-1",
-          "headline": "创新联盟发布6月动力电池数据：装车76.5GWh，磷酸铁锂占83.3%",
-          "segment": "电池与装机"
-        },
-        {
-          "subject": "中创新航",
-          "date": "2026-06-29",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-5",
-          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
-          "segment": "政策与贸易"
         }
       ]
     },
@@ -520,26 +694,76 @@
       ]
     },
     {
-      "id": "subject-eo9894",
-      "name": "吉利汽车",
+      "id": "subject-112jl3c",
+      "name": "蜂巢能源",
       "count": 2,
       "items": [
         {
-          "subject": "吉利汽车",
-          "date": "2026-07-23",
-          "report_date": "2026-07-28",
-          "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-19",
-          "headline": "Ford与吉利在西班牙设立合资公司，2028年起生产两款吉利电动SUV",
+          "subject": "蜂巢能源",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-15",
+          "headline": "小米汽车将发布昆仑架构，N90 Max和N70 Max两款SUV同步亮相",
           "segment": "终端电车"
         },
         {
-          "subject": "吉利汽车",
-          "date": "2026-07-14",
-          "report_date": "2026-07-15",
-          "report_file": "daily-2026-07-15.html",
-          "report_anchor": "news-6",
-          "headline": "吉利EX2在澳大利亚公布售价，35.3kWh版本起价26490澳元",
+          "subject": "蜂巢能源",
+          "date": "2026-07-20",
+          "report_date": "2026-07-22",
+          "report_file": "daily-2026-07-22.html",
+          "report_anchor": "news-8",
+          "headline": "蜂巢能源大冶PACK工厂首包下线，3亿元项目进入量产阶段",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
+      "id": "subject-1e8v0du",
+      "name": "国家发展改革委",
+      "count": 2,
+      "items": [
+        {
+          "subject": "国家发展改革委",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-2",
+          "headline": "商务部披露以旧换新带动超1.25万亿元销售，6月新能源补贴车占65.4%",
+          "segment": "政策与贸易"
+        },
+        {
+          "subject": "国家发展改革委",
+          "date": "2026-07-06",
+          "report_date": "2026-07-11",
+          "report_file": "daily-2026-07-11.html",
+          "report_anchor": "news-2",
+          "headline": "中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-lm90zx",
+      "name": "理想汽车",
+      "count": 2,
+      "items": [
+        {
+          "subject": "理想汽车",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-18",
+          "headline": "理想汽车i6因大灯供应短缺少产约4000辆，产线已恢复并继续准备9月上市",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "理想汽车",
+          "date": "2026-07-24",
+          "report_date": "2026-07-28",
+          "report_file": "daily-2026-07-28.html",
+          "report_anchor": "news-16",
+          "headline": "理想L9在哈萨克斯坦上市，并与Allur启动海外首个本地化组装",
           "segment": "终端电车"
         }
       ]
@@ -620,27 +844,27 @@
       ]
     },
     {
-      "id": "subject-1w8bi0i",
-      "name": "欣旺达",
+      "id": "subject-nb3fd4",
+      "name": "小米汽车",
       "count": 2,
       "items": [
         {
-          "subject": "欣旺达",
-          "date": "2026-07-24",
-          "report_date": "2026-07-28",
-          "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-5",
-          "headline": "天齐锂业拟1.5亿元认购欣旺达动力0.55%新增股份",
-          "segment": "上游镍钴锂"
+          "subject": "小米汽车",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-15",
+          "headline": "小米汽车将发布昆仑架构，N90 Max和N70 Max两款SUV同步亮相",
+          "segment": "终端电车"
         },
         {
-          "subject": "欣旺达",
-          "date": "2026-06-29",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-5",
-          "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
-          "segment": "政策与贸易"
+          "subject": "小米汽车",
+          "date": "2026-07-08",
+          "report_date": "2026-07-10",
+          "report_file": "daily-2026-07-10.html",
+          "report_anchor": "news-20",
+          "headline": "小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露",
+          "segment": "终端电车"
         }
       ]
     },
@@ -666,6 +890,31 @@
           "report_anchor": "news-6",
           "headline": "Eni 以 2.25 亿美元收购 EnergyX 智利 Black Giant 锂项目 25% 股权",
           "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1ex4jlo",
+      "name": "Ford",
+      "count": 2,
+      "items": [
+        {
+          "subject": "Ford",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-10",
+          "headline": "Ford二季度录得13亿美元净亏损，Model e电动车业务继续拖累利润",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "Ford",
+          "date": "2026-07-23",
+          "report_date": "2026-07-28",
+          "report_file": "daily-2026-07-28.html",
+          "report_anchor": "news-19",
+          "headline": "Ford与吉利在西班牙设立合资公司，2028年起生产两款吉利电动SUV",
+          "segment": "终端电车"
         }
       ]
     },
@@ -745,27 +994,52 @@
       ]
     },
     {
-      "id": "subject-qnqrww",
-      "name": "SMM",
+      "id": "subject-shrwt5",
+      "name": "Mercedes-Benz",
       "count": 2,
       "items": [
         {
-          "subject": "SMM",
-          "date": "2026-07-24",
-          "report_date": "2026-07-28",
-          "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-6",
-          "headline": "SMM判断阿根廷暴雪主要冲击卡塔马卡锂盐物流而非系统性停产",
+          "subject": "Mercedes-Benz",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-11",
+          "headline": "Momenta获德国KBA全境L4测试许可，中国自动驾驶供应商进入德国城市道路测试",
+          "segment": "终端电车"
+        },
+        {
+          "subject": "Mercedes-Benz",
+          "date": "2026-07-13",
+          "report_date": "2026-07-13",
+          "report_file": "daily-2026-07-13.html",
+          "report_anchor": "news-7",
+          "headline": "Mercedes-Benz投用匈牙利第二工厂，电动C级开始量产",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-ehl8w0",
+      "name": "Rock Tech Lithium",
+      "count": 2,
+      "items": [
+        {
+          "subject": "Rock Tech Lithium",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-5",
+          "headline": "Rock Tech与Transamine签署Georgia Lake锂精矿七年包销协议，预付款融资最高8000万美元",
           "segment": "上游镍钴锂"
         },
         {
-          "subject": "SMM",
-          "date": "2026-07-23",
-          "report_date": "2026-07-28",
-          "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-9",
-          "headline": "SMM认为磷酸铁锂7月出货修复但加工费谈判仍压制非一体化利润",
-          "segment": "正极与前驱体"
+          "subject": "Rock Tech Lithium",
+          "date": "2026-07-13",
+          "report_date": "2026-07-13",
+          "report_file": "daily-2026-07-13.html",
+          "report_anchor": "news-1",
+          "headline": "Rock Tech披露CMIF锂加工项目执行方案，联合两家机构测试粗妥尔油浮选试剂",
+          "segment": "政策与贸易"
         }
       ]
     },
@@ -859,6 +1133,22 @@
       ]
     },
     {
+      "id": "subject-tb35hh",
+      "name": "乘联分会",
+      "count": 1,
+      "items": [
+        {
+          "subject": "乘联分会",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-20",
+          "headline": "崔东树认为上半年汽车行业利润率仅3.8%，价格战和成本压力仍压制车企盈利",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
       "id": "subject-1d2aqqx",
       "name": "乘联会",
       "count": 1,
@@ -870,6 +1160,22 @@
           "report_file": "daily-2026-07-28.html",
           "report_anchor": "news-18",
           "headline": "乘联会预计7月新能源乘用车零售98万辆，渗透率升至64.5%",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-16a85sk",
+      "name": "崔东树",
+      "count": 1,
+      "items": [
+        {
+          "subject": "崔东树",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-20",
+          "headline": "崔东树认为上半年汽车行业利润率仅3.8%，价格战和成本压力仍压制车企盈利",
           "segment": "终端电车"
         }
       ]
@@ -907,18 +1213,18 @@
       ]
     },
     {
-      "id": "subject-112jl3c",
-      "name": "蜂巢能源",
+      "id": "subject-19v3s6a",
+      "name": "盖世汽车",
       "count": 1,
       "items": [
         {
-          "subject": "蜂巢能源",
-          "date": "2026-07-20",
-          "report_date": "2026-07-22",
-          "report_file": "daily-2026-07-22.html",
-          "report_anchor": "news-8",
-          "headline": "蜂巢能源大冶PACK工厂首包下线，3亿元项目进入量产阶段",
-          "segment": "电池与装机"
+          "subject": "盖世汽车",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-13",
+          "headline": "盖世汽车认为车桩比接近2:1后，充电难转向高峰排队和站点体验问题",
+          "segment": "终端电车"
         }
       ]
     },
@@ -971,17 +1277,17 @@
       ]
     },
     {
-      "id": "subject-1e8v0du",
-      "name": "国家发展改革委",
+      "id": "subject-6xogt2",
+      "name": "国家标准化管理委员会",
       "count": 1,
       "items": [
         {
-          "subject": "国家发展改革委",
-          "date": "2026-07-06",
-          "report_date": "2026-07-11",
-          "report_file": "daily-2026-07-11.html",
-          "report_anchor": "news-2",
-          "headline": "中国两项储能安全规则7月实施，电化学储能涉网性能纳入重大隐患判定",
+          "subject": "国家标准化管理委员会",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-1",
+          "headline": "国内新认证乘用车不得搭载外部智驾小蓝灯，吉利称将跟随国标执行",
           "segment": "政策与贸易"
         }
       ]
@@ -1031,6 +1337,22 @@
           "report_anchor": "news-3",
           "headline": "海南矿业上半年运抵7万吨锂精矿，星之海锂盐项目实现月度达产",
           "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-1wqjijp",
+      "name": "合众新能源",
+      "count": 1,
+      "items": [
+        {
+          "subject": "合众新能源",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-17",
+          "headline": "哪吒南宁基地467台生产设备进入司法拍卖，起拍价6031万元",
+          "segment": "终端电车"
         }
       ]
     },
@@ -1291,22 +1613,6 @@
       ]
     },
     {
-      "id": "subject-lm90zx",
-      "name": "理想汽车",
-      "count": 1,
-      "items": [
-        {
-          "subject": "理想汽车",
-          "date": "2026-07-24",
-          "report_date": "2026-07-28",
-          "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-16",
-          "headline": "理想L9在哈萨克斯坦上市，并与Allur启动海外首个本地化组装",
-          "segment": "终端电车"
-        }
-      ]
-    },
-    {
       "id": "subject-14q99m8",
       "name": "美国白宫",
       "count": 1,
@@ -1355,6 +1661,38 @@
       ]
     },
     {
+      "id": "subject-1j0phs7",
+      "name": "美国政府",
+      "count": 1,
+      "items": [
+        {
+          "subject": "美国政府",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-4",
+          "headline": "美国拟对60个贸易伙伴加征10%至12.5%关税，覆盖欧盟和中国",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-qiwj0y",
+      "name": "哪吒汽车",
+      "count": 1,
+      "items": [
+        {
+          "subject": "哪吒汽车",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-17",
+          "headline": "哪吒南宁基地467台生产设备进入司法拍卖，起拍价6031万元",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
       "id": "subject-gijcqz",
       "name": "奇瑞汽车",
       "count": 1,
@@ -1383,6 +1721,22 @@
           "report_anchor": "news-13",
           "headline": "广汽与引望合作车型启境GT7启动全国交付，支持6C超充",
           "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-o9kblw",
+      "name": "起亚",
+      "count": 1,
+      "items": [
+        {
+          "subject": "起亚",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-8",
+          "headline": "SMM认为韩国6月新能源车回升主要由HEV驱动，电池需求不能按销量同比例外推",
+          "segment": "电池与装机"
         }
       ]
     },
@@ -1483,6 +1837,38 @@
       ]
     },
     {
+      "id": "subject-2c8nhc",
+      "name": "商务部",
+      "count": 1,
+      "items": [
+        {
+          "subject": "商务部",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-2",
+          "headline": "商务部披露以旧换新带动超1.25万亿元销售，6月新能源补贴车占65.4%",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1flpa49",
+      "name": "上海南港码头",
+      "count": 1,
+      "items": [
+        {
+          "subject": "上海南港码头",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-19",
+          "headline": "上海南港码头单航次装载7738辆新能源车，Glovis Nova刷新惠山泊位纪录",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
       "id": "subject-19wulqo",
       "name": "上汽集团",
       "count": 1,
@@ -1563,18 +1949,18 @@
       ]
     },
     {
-      "id": "subject-nb3fd4",
-      "name": "小米汽车",
+      "id": "subject-qrxxvr",
+      "name": "现代汽车",
       "count": 1,
       "items": [
         {
-          "subject": "小米汽车",
-          "date": "2026-07-08",
-          "report_date": "2026-07-10",
-          "report_file": "daily-2026-07-10.html",
-          "report_anchor": "news-20",
-          "headline": "小米汽车发布 SkyNomad 新系列名称，车型规格和投产计划仍未披露",
-          "segment": "终端电车"
+          "subject": "现代汽车",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-8",
+          "headline": "SMM认为韩国6月新能源车回升主要由HEV驱动，电池需求不能按销量同比例外推",
+          "segment": "电池与装机"
         }
       ]
     },
@@ -1675,6 +2061,38 @@
       ]
     },
     {
+      "id": "subject-19lpe39",
+      "name": "佑驾创新",
+      "count": 1,
+      "items": [
+        {
+          "subject": "佑驾创新",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-12",
+          "headline": "佑驾创新小竹T5 Pro无人车在河南济源批量落地，进入生鲜物流场景",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
+      "id": "subject-upkg4g",
+      "name": "臻驱科技",
+      "count": 1,
+      "items": [
+        {
+          "subject": "臻驱科技",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-9",
+          "headline": "臻驱科技SlimPACK-II功率模块实现量产交付，峰值电流700Arms、持续结温200摄氏度",
+          "segment": "电池与装机"
+        }
+      ]
+    },
+    {
       "id": "subject-jdafbm",
       "name": "中关村储能产业技术联盟",
       "count": 1,
@@ -1686,6 +2104,22 @@
           "report_file": "daily-2026-07-11.html",
           "report_anchor": "news-5",
           "headline": "中国电池与储能联盟倡议60天内支付供应商账款，宁德时代等响应",
+          "segment": "政策与贸易"
+        }
+      ]
+    },
+    {
+      "id": "subject-1plqqqm",
+      "name": "中国汽车工业协会",
+      "count": 1,
+      "items": [
+        {
+          "subject": "中国汽车工业协会",
+          "date": "2026-07-28",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-3",
+          "headline": "工信部将加快发布车企供应商货款支付规范指引，20家媒体任账期监督员",
           "segment": "政策与贸易"
         }
       ]
@@ -2459,22 +2893,6 @@
       ]
     },
     {
-      "id": "subject-1ex4jlo",
-      "name": "Ford",
-      "count": 1,
-      "items": [
-        {
-          "subject": "Ford",
-          "date": "2026-07-23",
-          "report_date": "2026-07-28",
-          "report_file": "daily-2026-07-28.html",
-          "report_anchor": "news-19",
-          "headline": "Ford与吉利在西班牙设立合资公司，2028年起生产两款吉利电动SUV",
-          "segment": "终端电车"
-        }
-      ]
-    },
-    {
       "id": "subject-1odexy9",
       "name": "FranklinWH",
       "count": 1,
@@ -2487,6 +2905,22 @@
           "report_anchor": "news-11",
           "headline": "FranklinWH家庭储能进入Austin Energy与Entergy Texas两项虚拟电厂计划",
           "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-1jrw8er",
+      "name": "Glovis",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Glovis",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-19",
+          "headline": "上海南港码头单航次装载7738辆新能源车，Glovis Nova刷新惠山泊位纪录",
+          "segment": "终端电车"
         }
       ]
     },
@@ -2683,6 +3117,22 @@
       ]
     },
     {
+      "id": "subject-1gd4iqj",
+      "name": "KBA",
+      "count": 1,
+      "items": [
+        {
+          "subject": "KBA",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-11",
+          "headline": "Momenta获德国KBA全境L4测试许可，中国自动驾驶供应商进入德国城市道路测试",
+          "segment": "终端电车"
+        }
+      ]
+    },
+    {
       "id": "subject-tdb1kx",
       "name": "Koki Holdings",
       "count": 1,
@@ -2763,17 +3213,17 @@
       ]
     },
     {
-      "id": "subject-shrwt5",
-      "name": "Mercedes-Benz",
+      "id": "subject-1x9gcpg",
+      "name": "Momenta",
       "count": 1,
       "items": [
         {
-          "subject": "Mercedes-Benz",
-          "date": "2026-07-13",
-          "report_date": "2026-07-13",
-          "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-7",
-          "headline": "Mercedes-Benz投用匈牙利第二工厂，电动C级开始量产",
+          "subject": "Momenta",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-11",
+          "headline": "Momenta获德国KBA全境L4测试许可，中国自动驾驶供应商进入德国城市道路测试",
           "segment": "终端电车"
         }
       ]
@@ -3047,22 +3497,6 @@
           "report_anchor": "news-6",
           "headline": "SMM判断阿根廷暴雪主要冲击卡塔马卡锂盐物流而非系统性停产",
           "segment": "上游镍钴锂"
-        }
-      ]
-    },
-    {
-      "id": "subject-ehl8w0",
-      "name": "Rock Tech Lithium",
-      "count": 1,
-      "items": [
-        {
-          "subject": "Rock Tech Lithium",
-          "date": "2026-07-13",
-          "report_date": "2026-07-13",
-          "report_file": "daily-2026-07-13.html",
-          "report_anchor": "news-1",
-          "headline": "Rock Tech披露CMIF锂加工项目执行方案，联合两家机构测试粗妥尔油浮选试剂",
-          "segment": "政策与贸易"
         }
       ]
     },
@@ -3367,6 +3801,38 @@
           "report_anchor": "news-6",
           "headline": "TotalEnergies与合作方投运南非Hydra项目，配置500MWh电池储能",
           "segment": "终端储能"
+        }
+      ]
+    },
+    {
+      "id": "subject-il3dbf",
+      "name": "Transamine",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Transamine",
+          "date": "2026-07-27",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-5",
+          "headline": "Rock Tech与Transamine签署Georgia Lake锂精矿七年包销协议，预付款融资最高8000万美元",
+          "segment": "上游镍钴锂"
+        }
+      ]
+    },
+    {
+      "id": "subject-lmsxep",
+      "name": "Uber",
+      "count": 1,
+      "items": [
+        {
+          "subject": "Uber",
+          "date": "2026-07-29",
+          "report_date": "2026-07-29",
+          "report_file": "daily-2026-07-29.html",
+          "report_anchor": "news-11",
+          "headline": "Momenta获德国KBA全境L4测试许可，中国自动驾驶供应商进入德国城市道路测试",
+          "segment": "终端电车"
         }
       ]
     },
